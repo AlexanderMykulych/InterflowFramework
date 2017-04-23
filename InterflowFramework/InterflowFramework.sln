@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework", "InterflowFramework\InterflowFramework.csproj", "{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner", "InterflowFrameworkRunner\InterflowFrameworkRunner.csproj", "{66589B81-8B69-49AD-A131-D591CFC05228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66589B81-8B69-49AD-A131-D591CFC05228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66589B81-8B69-49AD-A131-D591CFC05228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66589B81-8B69-49AD-A131-D591CFC05228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66589B81-8B69-49AD-A131-D591CFC05228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

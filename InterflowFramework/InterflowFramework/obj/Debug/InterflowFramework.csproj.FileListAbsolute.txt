@@ -1,0 +1,8 @@
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\InterflowFramework.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\InterflowFramework.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Debug\InterflowFramework.csprojResolveAssemblyReference.cache
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Debug\InterflowFramework.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Debug\InterflowFramework.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.xml
