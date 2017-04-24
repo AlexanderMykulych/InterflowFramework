@@ -6,3 +6,9 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\De
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\HtmlAgilityPack.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\Newtonsoft.Json.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\Newtonsoft.Json.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\ClosedXML.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\ClosedXML.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\ClosedXML.xml

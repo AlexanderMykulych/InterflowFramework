@@ -45,13 +45,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\ByMessageType\Html\HtmlTextImport.cs" />
+    <Compile Include="TestCase\ByMessageType\Excell\ExcellTextImport.cs" />
     <Compile Include="TestCase\ByMessageType\Text\TestTextImport.cs" />
+    <Compile Include="TestCase\ByMessageType\Json\JsonTextImport.cs" />
     <Compile Include="TestCase\ByMessageType\Xml\XmlTextImport.cs" />
     <Compile Include="TestProvider\ITest.cs" />
     <Compile Include="TestProvider\TestProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="TestCase\ByMessageType\Excell\input.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InterflowFramework\InterflowFramework.csproj">
@@ -62,6 +65,7 @@
   <ItemGroup>
     <Content Include="TestCase\ByMessageType\Html\InputText.txt" />
     <Content Include="TestCase\ByMessageType\Text\InputText.txt" />
+    <Content Include="TestCase\ByMessageType\Json\InputText.txt" />
     <Content Include="TestCase\ByMessageType\Xml\InputText.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

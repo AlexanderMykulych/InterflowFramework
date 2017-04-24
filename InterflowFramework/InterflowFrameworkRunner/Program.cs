@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using InterflowFrameworkRunner.TestProvider;
 using InterflowFrameworkRunner.TestCase.ByMessageType.Html;
+using InterflowFrameworkRunner.TestCase.ByMessageType.JsonTextImport;
+using InterflowFrameworkRunner.TestCase.ByMessageType.ExcellTextImport;
 
 namespace InterflowFrameworkRunner
 {
@@ -17,6 +19,8 @@ namespace InterflowFrameworkRunner
 			testProvider.Add("text", new TestTextImport());
 			testProvider.Add("html", new HtmlTextImport());
 			testProvider.Add("xml", new XmlTextImport());
+			testProvider.Add("json", new JsonTextImport());
+			testProvider.Add("excel", new ExcellTextImport());
 			Console.WriteLine("Select mode:");
 			var testName = Console.ReadLine();
 			Console.WriteLine("Go");

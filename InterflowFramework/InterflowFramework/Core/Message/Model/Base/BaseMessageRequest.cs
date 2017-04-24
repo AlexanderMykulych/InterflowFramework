@@ -34,8 +34,14 @@ namespace InterflowFramework.Core.Message.Model.Base
 		protected virtual void ParseRequest()
 		{
 			int splitIndex = Request.IndexOf(":");
-			RequestType = Request.Substring(0, splitIndex);
-			RequestValue = Request.Substring(splitIndex + 1);
+			if (splitIndex > -1)
+			{
+				RequestType = Request.Substring(0, splitIndex);
+				RequestValue = Request.Substring(splitIndex + 1);
+			} else {
+				RequestType = Request;
+				RequestValue = null;
+			}
 		}
 	}
 }
