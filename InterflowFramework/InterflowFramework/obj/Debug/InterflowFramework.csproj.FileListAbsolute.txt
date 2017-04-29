@@ -12,3 +12,10 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\De
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\ClosedXML.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\InterflowFramework.dll.config
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\EntityFramework.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\LinqKit.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\EntityFramework.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\LinqKit.xml

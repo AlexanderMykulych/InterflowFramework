@@ -15,3 +15,12 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ClosedXML.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFrameworkTelegram.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\Telegram.Bot.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFrameworkTelegram.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFramework.dll.config
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFrameworkEmail.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ActiveUp.Net.Imap4.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ActiveUp.Net.Common.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ActiveUp.Net.Dns.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFrameworkEmail.pdb

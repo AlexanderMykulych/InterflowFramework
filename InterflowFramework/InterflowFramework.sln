@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework", "Inter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner", "InterflowFrameworkRunner\InterflowFrameworkRunner.csproj", "{66589B81-8B69-49AD-A131-D591CFC05228}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkTelegram", "InterflowFrameworkTelegram\InterflowFrameworkTelegram.csproj", "{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkEmail", "InterflowFrameworkEmail\InterflowFrameworkEmail.csproj", "{FC84C199-34A2-41C9-B65C-A6960ADD1B84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{66589B81-8B69-49AD-A131-D591CFC05228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66589B81-8B69-49AD-A131-D591CFC05228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66589B81-8B69-49AD-A131-D591CFC05228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
