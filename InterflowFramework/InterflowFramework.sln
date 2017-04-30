@@ -7,9 +7,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework", "Inter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner", "InterflowFrameworkRunner\InterflowFrameworkRunner.csproj", "{66589B81-8B69-49AD-A131-D591CFC05228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkTelegram", "InterflowFrameworkTelegram\InterflowFrameworkTelegram.csproj", "{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework.Telegram", "InterflowFrameworkTelegram\InterflowFramework.Telegram.csproj", "{9B56C2F0-F3FA-4575-B1FC-A4E90C55B5C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkEmail", "InterflowFrameworkEmail\InterflowFrameworkEmail.csproj", "{FC84C199-34A2-41C9-B65C-A6960ADD1B84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework.Email", "InterflowFrameworkEmail\InterflowFramework.Email.csproj", "{FC84C199-34A2-41C9-B65C-A6960ADD1B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyInternalFramework", "NancyInternalFramework\NancyInternalFramework.csproj", "{B1DC5EC6-4450-4F67-813A-C92AD13F57FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A1E21A75-AEE1-43B2-A9A6-6D338F90A31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework_Test", "InterflowFramework_Test\InterflowFramework_Test.csproj", "{1C0AD29C-B86B-4D98-AA59-15233B395951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalFramework.NetMQ", "InternalFramework.NetMQ\InternalFramework.NetMQ.csproj", "{75FCD275-6972-4BF1-BA9D-D6BCA41E92B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runner", "Runner", "{EC5B7ED9-69B8-4A91-BE23-C762618D0954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMqRunnerClient", "NetMqRunnerClient\NetMqRunnerClient.csproj", "{BB04D4F3-2EAC-4C79-91B4-33A80720E303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMqRunnerServer", "NetMqRunnerServer\NetMqRunnerServer.csproj", "{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +47,34 @@ Global
 		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC84C199-34A2-41C9-B65C-A6960ADD1B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DC5EC6-4450-4F67-813A-C92AD13F57FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DC5EC6-4450-4F67-813A-C92AD13F57FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DC5EC6-4450-4F67-813A-C92AD13F57FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DC5EC6-4450-4F67-813A-C92AD13F57FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0AD29C-B86B-4D98-AA59-15233B395951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0AD29C-B86B-4D98-AA59-15233B395951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0AD29C-B86B-4D98-AA59-15233B395951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0AD29C-B86B-4D98-AA59-15233B395951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FCD275-6972-4BF1-BA9D-D6BCA41E92B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FCD275-6972-4BF1-BA9D-D6BCA41E92B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FCD275-6972-4BF1-BA9D-D6BCA41E92B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FCD275-6972-4BF1-BA9D-D6BCA41E92B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB04D4F3-2EAC-4C79-91B4-33A80720E303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB04D4F3-2EAC-4C79-91B4-33A80720E303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB04D4F3-2EAC-4C79-91B4-33A80720E303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB04D4F3-2EAC-4C79-91B4-33A80720E303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66589B81-8B69-49AD-A131-D591CFC05228} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
+		{1C0AD29C-B86B-4D98-AA59-15233B395951} = {A1E21A75-AEE1-43B2-A9A6-6D338F90A31C}
+		{BB04D4F3-2EAC-4C79-91B4-33A80720E303} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
+		{B938FFB3-F4D5-46E0-9BBC-0429FEE6A11B} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
 	EndGlobalSection
 EndGlobal

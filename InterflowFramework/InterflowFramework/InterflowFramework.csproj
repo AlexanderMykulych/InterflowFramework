@@ -52,6 +52,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -70,6 +73,7 @@
     <Compile Include="Core\Channel\InputPoint\Const\InputPointEvent.cs" />
     <Compile Include="Core\Channel\InputPoint\Interface\IInputPoint.cs" />
     <Compile Include="Core\Channel\InputPoint\Model\BaseInputPoint.cs" />
+    <Compile Include="Core\Channel\InputPoint\Model\SimpleInputPoint.cs" />
     <Compile Include="Core\Channel\OutputPoint\Const\OutputPointEvent.cs" />
     <Compile Include="Core\Channel\OutputPoint\Interface\IOutputPoint.cs" />
     <Compile Include="Core\Channel\OutputPoint\Model\BaseOutputPoint.cs" />

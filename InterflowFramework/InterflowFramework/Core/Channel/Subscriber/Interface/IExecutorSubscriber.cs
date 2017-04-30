@@ -9,6 +9,6 @@ namespace InterflowFramework.Core.Channel.Subscriber.Interface
 {
 	public interface IExecutorSubscriber: ISubscriber, IEnabler, IDisposable
 	{
-		void Execute(string key, object message);
+		void Execute(string key, object message = null);
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using InterflowFramework.Core.Channel.InputPoint;
+using InterflowFramework.Core.Channel.InputPoint.Model;
 using InterflowFramework.Core.Channel.Model;
 using InterflowFramework.Core.Channel.OutputPoint;
 using InterflowFramework.Core.Channel.OutputPoint.Const;
@@ -25,12 +26,15 @@ namespace InterflowFrameworkRunner.TestCase.Channel.BaseTestOnText
 		{
 			var OutPoint = new TestOutpuPoint();
 			OutPoint.On(OutputPointEvent.OnMessageRecived, onMessage);
+			var nancyInput = new SimpleInputPoint();
+			NancyChannel.point = nancyInput;
 			Channel = new MessageChannel()
 			{
 				Transport = new InlineTransport(),
 				InputPoints = new List<IInputPoint>() {
 					new TelegramInputPoint(new TelegramInputPointConfig("368717724:AAFkTcAtUnKXihwTiHqwAuCdXEvN6USz4Pk")),
-					new EmailInputPoint(new EmailInputPointConfig("imap.gmail.com", 993, true, "alexander.mykulych@gmail.com", "19960121sasha"))
+					//new EmailInputPoint(new EmailInputPointConfig("imap.gmail.com", 993, true, "alexander.mykulych@gmail.com", "19960121sasha")),
+					nancyInput
 				},
 				OutputPoints = new List<IOutputPoint>() { OutPoint }
 			};

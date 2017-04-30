@@ -71,11 +71,17 @@ namespace InterflowFramework.Core.Channel.Model
 		}
 		protected virtual void ConfigurateOutputPoints()
 		{
-			OutputPoints.ForEach(point => ConfigurateOutputPointSubscribe(point));
+			if (OutputPoints != null)
+			{
+				OutputPoints.ForEach(point => ConfigurateOutputPointSubscribe(point));
+			}
 		}
 		protected virtual void ConfigurateInputPoints()
 		{
-			InputPoints.ForEach(point => ConfigurateInputPointSubscribe(point));
+			if (InputPoints != null)
+			{
+				InputPoints.ForEach(point => ConfigurateInputPointSubscribe(point));
+			}
 		}
 		protected abstract void ConfigurateInputPointSubscribe(IInputPoint point);
 		protected abstract void ConfigurateOutputPointSubscribe(IOutputPoint point);

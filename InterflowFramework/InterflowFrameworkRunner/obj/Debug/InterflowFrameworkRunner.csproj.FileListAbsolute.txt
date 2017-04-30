@@ -24,3 +24,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ActiveUp.Net.Common.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\ActiveUp.Net.Dns.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\InterflowFrameworkEmail.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\Nancy.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\Nancy.Hosting.Self.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\Nancy.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Debug\Nancy.Hosting.Self.xml

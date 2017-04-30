@@ -10,6 +10,9 @@ namespace InterflowFramework.Core.LinqExtension
 	{
 		public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
 		{
+			if(source == null) {
+				return;
+			}
 			foreach (var item in source)
 			{
 				action(item);

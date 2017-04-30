@@ -10,6 +10,7 @@ using InterflowFrameworkRunner.TestCase.ByMessageType.JsonTextImport;
 using InterflowFrameworkRunner.TestCase.ByMessageType.ExcellTextImport;
 using InterflowFramework.Core.Channel.OutputPoint.Model.TestPoint;
 using InterflowFrameworkRunner.TestCase.Channel.BaseTestOnText;
+using Nancy.Hosting.Self;
 
 namespace InterflowFrameworkRunner
 {

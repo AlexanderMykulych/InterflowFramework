@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0-clinteastwood\lib\net452\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Self.2.0.0-clinteastwood\lib\net452\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,21 +56,24 @@
     <Compile Include="TestCase\ByMessageType\Json\JsonTextImport.cs" />
     <Compile Include="TestCase\ByMessageType\Xml\XmlTextImport.cs" />
     <Compile Include="TestCase\Channel\BaseTestOnText\Test.cs" />
+    <Compile Include="TestCase\Channel\NancyChannel.cs" />
+    <Compile Include="TestCase\Channel\Nancy\NancyModule.cs" />
     <Compile Include="TestProvider\ITest.cs" />
     <Compile Include="TestProvider\TestProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="TestCase\ByMessageType\Excell\input.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InterflowFrameworkEmail\InterflowFrameworkEmail.csproj">
+    <ProjectReference Include="..\InterflowFrameworkEmail\InterflowFramework.Email.csproj">
       <Project>{FC84C199-34A2-41C9-B65C-A6960ADD1B84}</Project>
-      <Name>InterflowFrameworkEmail</Name>
+      <Name>InterflowFramework.Email</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InterflowFrameworkTelegram\InterflowFrameworkTelegram.csproj">
+    <ProjectReference Include="..\InterflowFrameworkTelegram\InterflowFramework.Telegram.csproj">
       <Project>{9b56c2f0-f3fa-4575-b1fc-a4e90c55b5c0}</Project>
-      <Name>InterflowFrameworkTelegram</Name>
+      <Name>InterflowFramework.Telegram</Name>
     </ProjectReference>
     <ProjectReference Include="..\InterflowFramework\InterflowFramework.csproj">
       <Project>{06b978f7-7d9a-4d1a-a2bf-1be33465a0f1}</Project>
@@ -77,6 +86,8 @@
     <Content Include="TestCase\ByMessageType\Json\InputText.txt" />
     <Content Include="TestCase\ByMessageType\Xml\InputText.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="..\packages\AsyncUsageAnalyzers.1.0.0-alpha003\analyzers\dotnet\AsyncUsageAnalyzers.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
