@@ -73,6 +73,7 @@
     <Compile Include="Core\Channel\InputPoint\Const\InputPointEvent.cs" />
     <Compile Include="Core\Channel\InputPoint\Interface\IInputPoint.cs" />
     <Compile Include="Core\Channel\InputPoint\Model\BaseInputPoint.cs" />
+    <Compile Include="Core\Channel\InputPoint\Model\LoadTestInputPoint.cs" />
     <Compile Include="Core\Channel\InputPoint\Model\SimpleInputPoint.cs" />
     <Compile Include="Core\Channel\OutputPoint\Const\OutputPointEvent.cs" />
     <Compile Include="Core\Channel\OutputPoint\Interface\IOutputPoint.cs" />

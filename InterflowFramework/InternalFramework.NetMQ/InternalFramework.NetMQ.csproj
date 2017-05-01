@@ -39,6 +39,9 @@
     <Reference Include="NetMQ.ReactiveExtensions, Version=0.9.4.7, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NetMQ.ReactiveExtensions.0.9.4-rc7\lib\net45\NetMQ.ReactiveExtensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
     </Reference>

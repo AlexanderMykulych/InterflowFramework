@@ -28,3 +28,4 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\obj\Release\InterflowFrameworkRunner.csprojResolveAssemblyReference.cache
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\obj\Release\InterflowFrameworkRunner.exe
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\obj\Release\InterflowFrameworkRunner.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner\bin\Release\protobuf-net.dll

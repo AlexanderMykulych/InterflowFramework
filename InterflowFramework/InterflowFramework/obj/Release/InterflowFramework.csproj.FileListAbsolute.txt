@@ -19,3 +19,4 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Re
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Release\InterflowFramework.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Release\InterflowFramework.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Release\protobuf-net.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Release\InterflowFramework.csprojResolveAssemblyReference.cache
