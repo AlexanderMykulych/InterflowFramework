@@ -90,6 +90,8 @@
     <Compile Include="Core\Channel\Transport\Interface\ITransportDiconnectMessage.cs" />
     <Compile Include="Core\Channel\Transport\Model\BaseTransport.cs" />
     <Compile Include="Core\Channel\Transport\Model\Inline\InlineTransport.cs" />
+    <Compile Include="Core\Factory\Channel\ChannelFactory.cs" />
+    <Compile Include="Core\Factory\Point\PointFactory.cs" />
     <Compile Include="Core\LinqExtension\LinqEnumerableExtension.cs" />
     <Compile Include="Core\Message\Interface\IMessage.cs" />
     <Compile Include="Core\Message\Interface\IMessageProvider.cs" />

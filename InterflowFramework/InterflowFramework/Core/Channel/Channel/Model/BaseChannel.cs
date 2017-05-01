@@ -55,9 +55,9 @@ namespace InterflowFramework.Core.Channel.Model
 		{
 			Transport.Dispose();
 			Transport = null;
-			InputPoints.ForEach(point => point.Dispose());
+			//InputPoints.ForEach(point => point.Dispose());
 			InputPoints = null;
-			OutputPoints.ForEach(point => point.Dispose());
+			//OutputPoints.ForEach(point => point.Dispose());
 			OutputPoints = null;
 		}
 		protected virtual void Configurate() {
