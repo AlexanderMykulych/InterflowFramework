@@ -27,8 +27,8 @@ namespace InternalFrameworkRunner
 
 		private static void RegisterPoint()
 		{
-			PointFactory.InPoint("test", () => new TelegramInputPoint(new InterflowFrameworkTelegram.InputPoint.Config.TelegramInputPointConfig("")));
-			PointFactory.OutPoint("test", () => new TestOutpuPoint());
+			PointFactory.In("test", () => new TelegramInputPoint(new InterflowFrameworkTelegram.InputPoint.Config.TelegramInputPointConfig("")));
+			PointFactory.Out("test", () => new TestOutpuPoint());
 		}
 	}
 }
