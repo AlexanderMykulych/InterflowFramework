@@ -9,5 +9,6 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Const
 	public static class OutputPointEvent
 	{
 		public static readonly string OnMessageRecived = @"messageRecived";
+		public static readonly string OnResponse = "response";
 	}
 }

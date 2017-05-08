@@ -11,6 +11,7 @@ namespace InterflowFramework.Core.Channel.Subscriber.Model
 	public class BaseSubscriber : IExecutorSubscriber
 	{
 		Dictionary<string, List<Action<object>>> Publisher = new Dictionary<string, List<Action<object>>>();
+		Dictionary<string, List<Action<object>>> OncePublisher = new Dictionary<string, List<Action<object>>>();
 		bool _isEnabled = false;
 		public ISubscriber On(string key, Action<object> onPublish)
 		{
@@ -39,7 +40,8 @@ namespace InterflowFramework.Core.Channel.Subscriber.Model
 			if(!_isEnabled) {
 				return;
 			}
-			if(Publisher.ContainsKey(key)) {
+			ExecuteOnce(key, message);
+			if (Publisher.ContainsKey(key)) {
 				Publisher[key].ForEach(x =>
 				{
 					try {
@@ -75,6 +77,38 @@ namespace InterflowFramework.Core.Channel.Subscriber.Model
 		{
 			Unsubscribe();
 			Publisher = null;
+		}
+
+		public ISubscriber Once(string key, Action<object> onPublish)
+		{
+			if (!OncePublisher.ContainsKey(key))
+			{
+				OncePublisher[key] = new List<Action<object>>();
+			}
+			OncePublisher[key].Add(onPublish);
+			return this;
+		}
+		public virtual void ExecuteOnce(string key, object message)
+		{
+			if (!_isEnabled)
+			{
+				return;
+			}
+			if (OncePublisher.ContainsKey(key))
+			{
+				OncePublisher[key].ForEach(x =>
+				{
+					try
+					{
+						x.Invoke(message);
+					}
+					catch (Exception e)
+					{
+						ExecuteNoSafe(SubscriberEvent.onPublishError, e);
+					}
+				});
+				OncePublisher.Remove(key);
+			}
 		}
 	}
 }

@@ -49,5 +49,10 @@ namespace InternalFramework.NetMQ.Transport
 		protected virtual void DisconnectSocketListener() {
 			Subscriber.Execute(TransportEvent.onDisconnect);
 		}
+
+		public override void Response(object message)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

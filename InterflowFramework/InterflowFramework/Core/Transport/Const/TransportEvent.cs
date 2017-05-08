@@ -11,5 +11,6 @@ namespace InterflowFramework.Core.Channel.Transport.Const
 		public static readonly string onConnect = @"connect";
 		public static readonly string onDisconnect = @"disconnect";
 		public static readonly string onMessage = @"message";
+		public static readonly string onResponse = @"response";
 	}
 }

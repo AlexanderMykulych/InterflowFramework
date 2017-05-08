@@ -9,5 +9,6 @@ namespace InterflowFramework.Core.Channel.Pusher.Interface
 	public interface IPusher
 	{
 		void Push(object message);
+		void Message(object message);
 	}
 }

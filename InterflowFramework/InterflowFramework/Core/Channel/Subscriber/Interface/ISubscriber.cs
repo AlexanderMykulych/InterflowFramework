@@ -9,6 +9,7 @@ namespace InterflowFramework.Core.Channel.Subscriber.Interface
 	public interface ISubscriber
 	{
 		ISubscriber On(string key, Action<object> onPublish);
+		ISubscriber Once(string key, Action<object> onPublish);
 		ISubscriber Unsubscribe(string key);
 		void Unsubscribe();
 	}

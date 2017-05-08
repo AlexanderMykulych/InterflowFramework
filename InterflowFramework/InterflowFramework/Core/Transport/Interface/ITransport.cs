@@ -12,5 +12,6 @@ namespace InterflowFramework.Core.Channel.Transport
 {
 	public interface ITransport : IPusher, IEnabler, ISubscriber, IDisposable
 	{
+		void Response(object message);
 	}
 }

@@ -9,41 +9,57 @@ using System.Threading.Tasks;
 using System.Reactive.Subjects;
 using Newtonsoft.Json;
 using InterflowFramework.Core.Channel.Transport.Const;
+using InterflowFramework.Core.Channel.Identified;
 
 namespace InterflowFramework.RabbitMq.Transport
 {
 	public class RabbitMqTransport : BaseTransport
 	{
-		public string Host;
+		public string ConnectionString;
 		public string TopicId;
 		private IBus _bus;
 		private bool PushEnable;
 		private bool SubscribeEnable;
 		public IConnectableObservable<RabbitMessage> Topic;
 		private IDisposable TopicDisposer;
+		private bool CatchResponse;
 
 		public IBus Bus {
 			get {
-				if(_bus == null && !string.IsNullOrEmpty(Host)) {
-					_bus = RabbitHutch.CreateBus(Host);
+				if(_bus == null && !string.IsNullOrEmpty(ConnectionString)) {
+					_bus = RabbitHutch.CreateBus(ConnectionString);
 				}
 				return _bus;
 			}
 		}
-		
-		public RabbitMqTransport(string host, string topic, bool pushToRabbitEnable = true, bool subscribeRabbitEnable = true) {
-			Host = host;
+
+		public RabbitMqTransport(string connectionString, string topic, bool pushToRabbitEnable = true, bool subscribeRabbitEnable = true, bool catchResponse = false)
+		{
+			ConnectionString = connectionString;
 			TopicId = topic;
 			PushEnable = pushToRabbitEnable;
 			SubscribeEnable = subscribeRabbitEnable;
+			CatchResponse = catchResponse;
 		}
 		public override void Push(object message)
 		{
 			if(!PushEnable) {
 				return;
 			}
-			Bus.Publish<RabbitMessage>(SerializeMessage(message), TopicId);
+			var rabbitMessage = SerializeMessage(message);
+			if (CatchResponse && message is IIdentified)
+			{
+				SubscribeQueueForResponse((IIdentified)message);
+			}
+			Bus.Send(TopicId, rabbitMessage);
 		}
+
+		private void SubscribeQueueForResponse(IIdentified id)
+		{
+			Bus.Receive<RabbitMessage>(id.GetId(), message => onResponse(message));
+		}
+
+		
 
 		protected virtual RabbitMessage SerializeMessage(object message)
 		{
@@ -63,12 +79,7 @@ namespace InterflowFramework.RabbitMq.Transport
 			if(!SubscribeEnable) {
 				return;
 			}
-			if (Topic == null)
-			{
-				Topic = Bus.ToObservable<RabbitMessage>(TopicId);
-				Topic.Subscribe(PushNext);
-			}
-			TopicDisposer = Topic.Connect();
+			Bus.Receive<RabbitMessage>(TopicId, message => PushNext(message));
 		}
 		public override void Dispose()
 		{
@@ -79,18 +90,36 @@ namespace InterflowFramework.RabbitMq.Transport
 			}
 		}
 		public virtual void PushNext(object message) {
-			var deserializedMessage = DeserializeMessage(message);
-			if(deserializedMessage != null) {
-				Subscriber.Execute(TransportEvent.onMessage, deserializedMessage);
-			}
-		}
-		protected virtual object DeserializeMessage(object message) {
-			if(message is RabbitMessage) {
+			if (message is RabbitMessage)
+			{
 				var rabbitMessage = (RabbitMessage)message;
-				var res = JsonConvert.DeserializeObject(rabbitMessage.Data, Type.GetType(rabbitMessage.Type));
-				return res;
+				var deserializedMessage = DeserializeMessage(rabbitMessage.Data, rabbitMessage.Type);
+				if (rabbitMessage.Mode == TRabbitMessageMode.Message) {
+					Subscriber.Execute(TransportEvent.onMessage, deserializedMessage);
+				} else if(rabbitMessage.Mode == TRabbitMessageMode.Response) {
+					Subscriber.Execute(TransportEvent.onResponse, deserializedMessage);
+				}
 			}
-			return null;
+			
+		}
+		protected virtual object DeserializeMessage(string message, string type) {
+			var res = JsonConvert.DeserializeObject(message, Type.GetType(type));
+			return res;
+		}
+
+		public override void Response(object message)
+		{
+			if (!(message is IIdentified))
+			{
+				return;
+			}
+			var rabbitMessage = SerializeMessage(message);
+			rabbitMessage.Mode = TRabbitMessageMode.Response;
+			Bus.Send(((IIdentified)message).GetId(), rabbitMessage);
+		}
+		private void onResponse(RabbitMessage obj)
+		{
+			Subscriber.Execute(TransportEvent.onResponse, DeserializeMessage(obj.Data, obj.Type));
 		}
 	}
 }

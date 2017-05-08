@@ -101,5 +101,11 @@ namespace InterflowFramework.Core.Channel.Model
 		{
 			Subscriber.Unsubscribe();
 		}
+
+		public ISubscriber Once(string key, Action<object> onPublish)
+		{
+			Subscriber.Once(key, onPublish);
+			return this;
+		}
 	}
 }

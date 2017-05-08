@@ -70,6 +70,7 @@
     <Compile Include="Core\Channel\Channel\Model\BaseChannel.cs" />
     <Compile Include="Core\Channel\Channel\Model\MessageChannel.cs" />
     <Compile Include="Core\Channel\Enabler\Interface\IEnabler.cs" />
+    <Compile Include="Core\Channel\Identified\IIdentified.cs" />
     <Compile Include="Core\Channel\InputPoint\Const\InputPointEvent.cs" />
     <Compile Include="Core\Channel\InputPoint\Interface\IInputPoint.cs" />
     <Compile Include="Core\Channel\InputPoint\Model\BaseInputPoint.cs" />

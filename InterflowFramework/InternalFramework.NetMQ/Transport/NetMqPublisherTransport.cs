@@ -56,5 +56,10 @@ namespace InternalFramework.NetMQ.Transport
 			base.Dispose();
 			Publisher.Dispose();
 		}
+
+		public override void Response(object message)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

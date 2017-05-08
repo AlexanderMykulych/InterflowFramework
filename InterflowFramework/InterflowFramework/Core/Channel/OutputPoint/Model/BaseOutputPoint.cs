@@ -10,6 +10,16 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Model
 {
 	public abstract class BaseOutputPoint : IOutputPoint
 	{
+		private string _id;
+		public virtual string Id {
+			get {
+				if (string.IsNullOrEmpty(_id))
+				{
+					_id = Guid.NewGuid().ToString();
+				}
+				return _id;
+			}
+		}
 		private IExecutorSubscriber _subscriber;
 		protected virtual IExecutorSubscriber Subscriber {
 			get {
@@ -50,5 +60,21 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Model
 		}
 
 		public abstract void Push(object message);
+
+		public ISubscriber Once(string key, Action<object> onPublish)
+		{
+			Subscriber.Once(key, onPublish);
+			return this;
+		}
+
+		public virtual void Message(object message)
+		{
+			throw new NotImplementedException();
+		}
+
+		public string GetId()
+		{
+			return Id;
+		}
 	}
 }

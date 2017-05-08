@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterflowFramework.Core.Channel.Identified;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,11 @@ namespace InterflowFramework.RabbitMq.Transport
 	{
 		public string Data;
 		public string Type;
+		public string ResponseTo;
+		public TRabbitMessageMode Mode = TRabbitMessageMode.Message;
+	}
+	public enum TRabbitMessageMode {
+		Message = 0,
+		Response = 1
 	}
 }

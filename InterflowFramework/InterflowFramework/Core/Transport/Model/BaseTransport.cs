@@ -54,5 +54,17 @@ namespace InterflowFramework.Core.Channel.Transport.Model
 		}
 
 		public abstract void Push(object message);
+
+		public ISubscriber Once(string key, Action<object> onPublish)
+		{
+			Subscriber.Once(key, onPublish);
+			return this;
+		}
+
+		public void Message(object message)
+		{
+			throw new NotImplementedException();
+		}
+		public abstract void Response(object message);
 	}
 }

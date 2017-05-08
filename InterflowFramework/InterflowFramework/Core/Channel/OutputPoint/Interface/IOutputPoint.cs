@@ -1,4 +1,5 @@
 ﻿using InterflowFramework.Core.Channel.Enabler.Interface;
+using InterflowFramework.Core.Channel.Identified;
 using InterflowFramework.Core.Channel.Pusher.Interface;
 using InterflowFramework.Core.Channel.Subscriber.Interface;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Channel.OutputPoint
 {
-	public interface IOutputPoint: IPusher, IEnabler, ISubscriber, IDisposable
+	public interface IOutputPoint: IPusher, IEnabler, ISubscriber, IDisposable, IIdentified
 	{
 	}
 }

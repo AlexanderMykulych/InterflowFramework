@@ -13,5 +13,10 @@ namespace InterflowFramework.Core.Channel.Transport.Model.Inline
 		{
 			Subscriber.Execute(TransportEvent.onMessage, message);
 		}
+
+		public override void Response(object message)
+		{
+			Subscriber.Execute(TransportEvent.onResponse, message);
+		}
 	}
 }
