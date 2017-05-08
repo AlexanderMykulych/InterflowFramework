@@ -13,7 +13,7 @@ using InterflowFramework.Core.Channel.Subscriber.Model;
 
 namespace InterflowFramework.Core.Channel.Model
 {
-	public abstract class BaseChannel: IChannel, IDisposable, ISubscriber
+	public abstract class BaseChannel: IChannel, ISubscriber
 	{
 		public ITransport Transport;
 		public IEnumerable<IInputPoint> InputPoints;
@@ -55,9 +55,7 @@ namespace InterflowFramework.Core.Channel.Model
 		{
 			Transport.Dispose();
 			Transport = null;
-			//InputPoints.ForEach(point => point.Dispose());
 			InputPoints = null;
-			//OutputPoints.ForEach(point => point.Dispose());
 			OutputPoints = null;
 		}
 		protected virtual void Configurate() {

@@ -1,5 +1,6 @@
 ﻿using InterflowFramework.Core.Channel.InputPoint;
 using InterflowFramework.Core.Channel.OutputPoint;
+using InterflowFramework.Core.Factory.Point;
 using InterflowFramework.Core.LinqExtension;
 using System;
 using System.Collections.Concurrent;
@@ -12,34 +13,42 @@ namespace InterflowFramework.Core.Factory.PointFactory
 {
 	public static class PointFactory
 	{
-		private static ConcurrentDictionary<string, List<Func<IInputPoint>>> _factoryListIn = new ConcurrentDictionary<string, List<Func<IInputPoint>>>();
-		private static ConcurrentDictionary<string, List<IInputPoint>> _pointListIn = new ConcurrentDictionary<string, List<IInputPoint>>();
-		private static ConcurrentDictionary<string, List<Func<IOutputPoint>>> _factoryListOut = new ConcurrentDictionary<string, List<Func<IOutputPoint>>>();
-		private static ConcurrentDictionary<string, List<IOutputPoint>> _pointListOut = new ConcurrentDictionary<string, List<IOutputPoint>>();
-		public static void In(string name, Func<IInputPoint> creator)
+		private static ConcurrentDictionary<string, List<InPointCreateInfo>> _factoryListIn = new ConcurrentDictionary<string, List<InPointCreateInfo>>();
+		private static ConcurrentDictionary<string, List<OutPointCreateInfo>> _factoryListOut = new ConcurrentDictionary<string, List<OutPointCreateInfo>>();
+		public static void In(string name, Func<IInputPoint> creator, bool singleton = true)
 		{
+			var info = new InPointCreateInfo()
+			{
+				Creator = creator,
+				Singleton = singleton
+			};
 			if (!_factoryListIn.ContainsKey(name))
 			{
-				_factoryListIn.TryAdd(name, new List<Func<IInputPoint>>() { creator });
+				_factoryListIn.TryAdd(name, new List<InPointCreateInfo>() { info });
 				return;
 			}
-			List<Func<IInputPoint>> list;
+			List<InPointCreateInfo> list;
 			if (_factoryListIn.TryGetValue(name, out list))
 			{
-				list.Add(creator);
+				list.Add(info);
 			}
 		}
-		public static void Out(string name, Func<IOutputPoint> creator)
+		public static void Out(string name, Func<IOutputPoint> creator, bool singleton = true)
 		{
+			var info = new OutPointCreateInfo()
+			{
+				Creator = creator,
+				Singleton = singleton
+			};
 			if (!_factoryListOut.ContainsKey(name))
 			{
-				_factoryListOut.TryAdd(name, new List<Func<IOutputPoint>>() { creator });
+				_factoryListOut.TryAdd(name, new List<OutPointCreateInfo>() { info });
 				return;
 			}
-			List<Func<IOutputPoint>> list;
+			List<OutPointCreateInfo> list;
 			if (_factoryListOut.TryGetValue(name, out list))
 			{
-				list.Add(creator);
+				list.Add(info);
 			}
 		}
 		public static void PushIn(string name, object message) {
@@ -48,61 +57,38 @@ namespace InterflowFramework.Core.Factory.PointFactory
 				points.ForEach(point => SafePush(point, message));
 			}
 		}
-		public static List<IInputPoint> GetInPoints(string name = null) {
-			if(!string.IsNullOrEmpty(name) && _pointListIn.ContainsKey(name)) {
-				List<IInputPoint> points;
-				if(_pointListIn.TryGetValue(name, out points)) {
-					return points;
-				}
-			} else if(!string.IsNullOrEmpty(name) && _factoryListIn.ContainsKey(name)) {
-				List<Func<IInputPoint>> creators;
-				if(_factoryListIn.TryGetValue(name, out creators)) {
-					var result = CreateInPoints(creators);
-					_pointListIn.TryAdd(name, result);
-					return result;
+		public static IEnumerable<IInputPoint> GetInPoints(string name = null) {
+			if(!string.IsNullOrEmpty(name) && _factoryListIn.ContainsKey(name)) {
+				List<InPointCreateInfo> pointCreators;
+				if(_factoryListIn.TryGetValue(name, out pointCreators)) {
+					return pointCreators
+						.Select(x => x.GetPoint())
+						.ToList();
 				}
 			} else if(string.IsNullOrEmpty(name)) {
-				_factoryListIn
-					.Where(x => !_pointListIn.Any() || !_pointListIn.ContainsKey(x.Key))
-					.ForEach(x => _pointListIn.TryAdd(x.Key, CreateInPoints(x.Value)));
-				return _pointListIn.SelectMany(x => x.Value).ToList();
+				return _factoryListIn
+					.SelectMany(x => x.Value.Select(y => y.GetPoint())).ToList();
 			}
 			return null;
 		}
-		//TODO: Add to mode of factory point: singleton and default
-		public static List<IOutputPoint> GetOutPoints(string name = null)
+		public static void Enable(params string[] points) {
+			points.ForEach(name => GetInPoints(name).ForEach(point => point.Enable()));
+		}
+		public static IEnumerable<IOutputPoint> GetOutPoints(string name = null)
 		{
-			if(string.IsNullOrEmpty(name)) {
-				return _pointListOut.SelectMany(x => x.Value).ToList();
-			}
-			if (_pointListOut.ContainsKey(name))
+			if (!string.IsNullOrEmpty(name) && _factoryListOut.ContainsKey(name))
 			{
-				List<IOutputPoint> points;
-				if (_pointListOut.TryGetValue(name, out points))
+				List<OutPointCreateInfo> pointCreators;
+				if (_factoryListOut.TryGetValue(name, out pointCreators))
 				{
-					return points;
+					return pointCreators
+						.Select(x => x.GetPoint()).ToList();
 				}
 			}
-			else if (_factoryListOut.ContainsKey(name))
+			else if (string.IsNullOrEmpty(name))
 			{
-				List<Func<IOutputPoint>> creators;
-				if (_factoryListOut.TryGetValue(name, out creators))
-				{
-					var result = creators.Select(creator =>
-					{
-						try
-						{
-							return creator.Invoke();
-						}
-						catch (Exception e)
-						{
-							//TODO: logger
-						}
-						return null;
-					}).Where(point => point != null).ToList();
-					_pointListOut.TryAdd(name, result);
-					return result;
-				}
+				return _factoryListOut
+					.SelectMany(x => x.Value.Select(y => y.GetPoint())).ToList();
 			}
 			return null;
 		}
@@ -112,20 +98,6 @@ namespace InterflowFramework.Core.Factory.PointFactory
 			} catch(Exception e) {
 				//TODO: logged
 			}
-		}
-		private static List<IInputPoint> CreateInPoints(List<Func<IInputPoint>> creators) {
-			return creators.Select(creator =>
-			{
-				try
-				{
-					return creator.Invoke();
-				}
-				catch (Exception e)
-				{
-					//TODO: logger
-				}
-				return null;
-			}).Where(point => point != null).ToList();
 		}
 	}
 }

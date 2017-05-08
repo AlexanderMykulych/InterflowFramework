@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Channel
 {
-	public interface IChannel: IEnabler
+	public interface IChannel: IEnabler, IDisposable
 	{
 	}
 }

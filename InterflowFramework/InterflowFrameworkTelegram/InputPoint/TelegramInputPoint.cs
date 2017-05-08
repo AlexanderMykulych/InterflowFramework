@@ -18,6 +18,7 @@ namespace InterflowFrameworkTelegram.InputPoint
 	{
 		public TelegramInputPointConfig Config;
 		public TelegramBotClient Bot;
+		public bool Enabled = false;
 		public TelegramInputPoint(TelegramInputPointConfig config) {
 			Config = config;
 			Bot = new TelegramBotClient(config.ApiKey);
@@ -32,16 +33,24 @@ namespace InterflowFrameworkTelegram.InputPoint
 		}
 		public override void Disable()
 		{
-			base.Disable();
-			Bot.OnMessage -= OnBotMessage;
-			Bot.StopReceiving();
+			if (Enabled)
+			{
+				base.Disable();
+				Bot.OnMessage -= OnBotMessage;
+				Bot.StopReceiving();
+				Enabled = false;
+			}
 		}
 		public override void Enable()
 		{
-			base.Enable();
-			Bot.OnMessage -= OnBotMessage;
-			Bot.OnMessage += OnBotMessage;
-			Bot.StartReceiving();
+			if (!Enabled)
+			{
+				base.Enable();
+				Bot.OnMessage -= OnBotMessage;
+				Bot.OnMessage += OnBotMessage;
+				Bot.StartReceiving();
+				Enabled = true;
+			}
 		}
 		public override void Push(object message)
 		{

@@ -32,6 +32,7 @@ namespace InternalFramework.NencyInPoint
 				Console.ReadKey();
 				Console.WriteLine("New");
 				inPoint.Action = _ => "Hello new 2!";
+				PointFactory.Enable("nancy");
 				Console.ReadKey();
 			}
 		}

@@ -12,15 +12,39 @@ namespace InternalFramework.Nancy.InputPoint
 	{
 		public string Method;
 		public string Path;
-		public Func<dynamic, object> Action;
+		private Func<dynamic, object> _mainAction;
+		private Func<dynamic, object> _disabledAction;
+		public Func<dynamic, object> Action {
+			get {
+				if(Enabled) {
+					return _mainAction;
+				}
+				return _disabledAction;
+			}
+			set {
+				_mainAction = value;
+			}
+		}
+		public bool Enabled = false;
 		public NancyInputPoint(string method, string path, Func<dynamic, object> action) {
 			Method = method;
 			Path = path;
 			Action = action;
+			_disabledAction = _ => HttpStatusCode.NotFound;
 		}
 		public override void Push(object message)
 		{
 			throw new NotImplementedException();
+		}
+		public override void Enable()
+		{
+			base.Enable();
+			Enabled = true;
+		}
+		public override void Disable()
+		{
+			base.Disable();
+			Enabled = false;
 		}
 	}
 }

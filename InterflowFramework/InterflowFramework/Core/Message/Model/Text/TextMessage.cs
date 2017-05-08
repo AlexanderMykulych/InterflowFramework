@@ -23,5 +23,9 @@ namespace InterflowFramework.Core.Message.Model.Text
 		{
 			return request is TextMessageRequest;
 		}
+		public override string ToString()
+		{
+			return Text;
+		}
 	}
 }
