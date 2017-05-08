@@ -21,7 +21,7 @@ namespace NetMqRunnerServer
 			OutPoint.On(OutputPointEvent.OnMessageRecived, onMessage);
 			var channel = new MessageChannel()
 			{
-				Transport = new NetMqListenerTransport(@"tcp://localhost:56001"),
+				Transport = new NetMqListenerTransport<TextMessage>(@"tcp://localhost:56001"),
 				OutputPoints = new List<IOutputPoint>() {
 					OutPoint
 				}

@@ -13,19 +13,19 @@ using System.Threading.Tasks;
 
 namespace InternalFramework.NetMQ.Transport
 {
-	public class NetMqPublisherTransport : BaseTransport
+	public class NetMqPublisherTransport<T> : BaseTransport
 	{
 		public string ConnectionString;
 		public NetMqPublisherTransport(string connectionString) {
 			ConnectionString = connectionString;
 		}
-		public IPublisherNetMq<TextMessage> Publisher;
+		public IPublisherNetMq<T> Publisher;
 		public override void Push(object message)
 		{
 			try
 			{
-				if(message is TextMessage) {
-					var textMsg = (TextMessage)message;
+				if(message is T) {
+					var textMsg = (T)message;
 					Publisher.OnNext(textMsg);
 				}
 				
@@ -44,7 +44,7 @@ namespace InternalFramework.NetMQ.Transport
 
 		protected virtual void EnablePublisher()
 		{
-			Publisher = new PublisherNetMq<TextMessage>(ConnectionString);
+			Publisher = new PublisherNetMq<T>(ConnectionString);
 		}
 
 		public override void Disable()

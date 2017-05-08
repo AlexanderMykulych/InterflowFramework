@@ -14,10 +14,10 @@ using System.Threading.Tasks;
 
 namespace InternalFramework.NetMQ.Transport
 {
-	public class NetMqListenerTransport : BaseTransport
+	public class NetMqListenerTransport<T> : BaseTransport
 	{
 		public string ConnectionString;
-		public SubscriberNetMq<TextMessage> Listener;
+		public SubscriberNetMq<T> Listener;
 
 		public NetMqListenerTransport(string connectionString) {
 			ConnectionString = connectionString;
@@ -42,8 +42,8 @@ namespace InternalFramework.NetMQ.Transport
 			Listener.Dispose();
 		}
 		protected virtual void CreateSocketConnection() {
-			Listener = new SubscriberNetMq<TextMessage>(ConnectionString);
-			Listener.Subscribe(Push);
+			Listener = new SubscriberNetMq<T>(ConnectionString);
+			Listener.Subscribe(x => Push(x));
 			Subscriber.Execute(TransportEvent.onConnect);
 		}
 		protected virtual void DisconnectSocketListener() {

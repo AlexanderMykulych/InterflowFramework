@@ -23,7 +23,7 @@ namespace NetMqRunnerClient
 			OutPoint.On(OutputPointEvent.OnMessageRecived, onMessage);
 			var channel = new MessageChannel()
 			{
-				Transport = new NetMqPublisherTransport(@"tcp://localhost:56001"),
+				Transport = new NetMqPublisherTransport<TextMessage>(@"tcp://localhost:56001"),
 				InputPoints = new List<IInputPoint>() {
 					new TelegramInputPoint(new TelegramInputPointConfig("368717724:AAFkTcAtUnKXihwTiHqwAuCdXEvN6USz4Pk"))
 				},
