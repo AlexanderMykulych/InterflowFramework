@@ -10,5 +10,8 @@ namespace InterflowFramework.Core.Channel.InputPoint.Const
 	{
 		public static readonly string onMessage = @"message";
 		public static readonly string onResponse = @"response";
+		public static readonly string onConnect = @"connect";
+		public static readonly string onDisconnect = @"disconnect";
+		
 	}
 }

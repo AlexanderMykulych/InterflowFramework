@@ -5,10 +5,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\InterflowFramework.RabbitMq.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\InterflowFrameworkTelegram.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\EasyNetQ.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Interfaces.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\Newtonsoft.Json.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\EasyNetQ.Rx.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Core.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\Telegram.Bot.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\ClosedXML.dll
@@ -20,9 +17,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\InterflowFrameworkTelegram.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\InterflowFramework.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\InterflowFramework.dll.config
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Interfaces.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\Newtonsoft.Json.xml
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Core.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\ClosedXML.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\HtmlAgilityPack.pdb
@@ -31,5 +26,3 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\obj\Release\InterflowFrameworkRunner.RabbitMqInput.csprojResolveAssemblyReference.cache
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\obj\Release\InterflowFrameworkRunner.RabbitMqInput.exe
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\obj\Release\InterflowFrameworkRunner.RabbitMqInput.pdb
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Linq.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqInput\bin\Release\System.Reactive.Linq.xml

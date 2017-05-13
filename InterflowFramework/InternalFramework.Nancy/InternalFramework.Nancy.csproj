@@ -46,6 +46,7 @@
     <Compile Include="InputPoint\MessagePackage.cs" />
     <Compile Include="InputPoint\NancyInputPoint.cs" />
     <Compile Include="MainModule.cs" />
+    <Compile Include="OutputPoint\ResponseOutputPoint.cs" />
     <Compile Include="OutputPoint\ReturOutputPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

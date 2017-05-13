@@ -20,8 +20,6 @@ namespace InterflowFramework.RabbitMq.Transport
 		private IBus _bus;
 		private bool PushEnable;
 		private bool SubscribeEnable;
-		public IConnectableObservable<RabbitMessage> Topic;
-		private IDisposable TopicDisposer;
 		private bool CatchResponse;
 
 		public IBus Bus {
@@ -84,10 +82,7 @@ namespace InterflowFramework.RabbitMq.Transport
 		public override void Dispose()
 		{
 			base.Dispose();
-			if (TopicDisposer != null)
-			{
-				TopicDisposer.Dispose();
-			}
+			Bus.Dispose();
 		}
 		public virtual void PushNext(object message) {
 			if (message is RabbitMessage)

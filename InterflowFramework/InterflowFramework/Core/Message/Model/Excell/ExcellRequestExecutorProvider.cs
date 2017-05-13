@@ -12,13 +12,9 @@ namespace InterflowFramework.Core.Message.Model.Excell
 {
 	public class ExcellRequestExecutorProvider : BaseRequestExecutorProvider
 	{
-		protected override Dictionary<string, IRequestExecutor> Executors {
-			get {
-				return executors;
-			}
+		protected override Type GetExecutorAttributeType()
+		{
+			return typeof(ExcellExecutorAttribute);
 		}
-		protected static Dictionary<string, IRequestExecutor> executors = new Dictionary<string, IRequestExecutor>() {
-			{ "excel", new ExcellRequestExecutor() }
-		};
 	}
 }

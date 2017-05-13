@@ -9,6 +9,7 @@ using System.Xml.XPath;
 
 namespace InterflowFramework.Core.Message.Model.Xml.Executor
 {
+	[XmlExecutor("xpath")]
 	public class XmlXPathRequestExecutor : BaseRequestExecutor
 	{
 		public override IEnumerable<object> GetMathes(string request, IMessage message)

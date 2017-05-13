@@ -11,6 +11,7 @@ namespace InternalFramework.Nancy.InputPoint
 	{
 		public string Id;
 		public Object Object;
+		public object AdditionalData;
 		public MessagePackage(Object obj, string id) {
 			Object = obj;
 			Id = id;
@@ -19,6 +20,9 @@ namespace InternalFramework.Nancy.InputPoint
 		public string GetId()
 		{
 			return Id;
+		}
+		public void SetAdditionalInfo(object data) {
+			AdditionalData = data;
 		}
 	}
 }

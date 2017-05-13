@@ -20,6 +20,7 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Model
 				return _id;
 			}
 		}
+		public bool IsEnabled = false;
 		private IExecutorSubscriber _subscriber;
 		protected virtual IExecutorSubscriber Subscriber {
 			get {
@@ -31,6 +32,7 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Model
 			}
 		}
 		public virtual void Disable() {
+			IsEnabled = false;
 			Subscriber.Disable();
 		}
 
@@ -39,6 +41,7 @@ namespace InterflowFramework.Core.Channel.OutputPoint.Model
 		}
 
 		public virtual void Enable() {
+			IsEnabled = true;
 			Subscriber.Enable();
 		}
 

@@ -79,6 +79,7 @@
     <Compile Include="Core\Channel\OutputPoint\Const\OutputPointEvent.cs" />
     <Compile Include="Core\Channel\OutputPoint\Interface\IOutputPoint.cs" />
     <Compile Include="Core\Channel\OutputPoint\Model\BaseOutputPoint.cs" />
+    <Compile Include="Core\Channel\OutputPoint\Model\InlineOutputPoint.cs" />
     <Compile Include="Core\Channel\OutputPoint\Model\TestPoint\TestOutpuPoint.cs" />
     <Compile Include="Core\Channel\Pusher\Interface\IPusher.cs" />
     <Compile Include="Core\Channel\Subscriber\Const\SubscriberEvent.cs" />
@@ -88,6 +89,12 @@
     <Compile Include="Core\Factory\Point\InPointCreateInfo.cs" />
     <Compile Include="Core\Factory\Point\OutPointCreateInfo.cs" />
     <Compile Include="Core\Factory\Point\PointCreateInfo.cs" />
+    <Compile Include="Core\Message\Model\Base\ExecutorAttribute.cs" />
+    <Compile Include="Core\Message\Model\Excell\ExcellExecutorAttribute.cs" />
+    <Compile Include="Core\Message\Model\Html\HtmlExecutorAttribute.cs" />
+    <Compile Include="Core\Message\Model\Json\JsonExecutorAttribute.cs" />
+    <Compile Include="Core\Message\Model\Text\TextExecutorAttribute.cs" />
+    <Compile Include="Core\Message\Model\Xml\XmlExecutorAttribute.cs" />
     <Compile Include="Core\Transport\Const\TransportEvent.cs" />
     <Compile Include="Core\Transport\Interface\IMessageTransport.cs" />
     <Compile Include="Core\Transport\Interface\ITransport.cs" />

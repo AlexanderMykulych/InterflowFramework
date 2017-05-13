@@ -8,13 +8,9 @@ namespace InterflowFramework.Core.Message.Model.Html
 {
 	internal class HtmlRequestExecutorProvider : BaseRequestExecutorProvider
 	{
-		protected override Dictionary<string, IRequestExecutor> Executors {
-			get {
-				return executors;
-			}
+		protected override Type GetExecutorAttributeType()
+		{
+			return typeof(HtmlExecutorAttribute);
 		}
-		protected static Dictionary<string, IRequestExecutor> executors = new Dictionary<string, IRequestExecutor>() {
-			{ "xpath", new HtmlXPathRequestExecutor() }
-		};
 	}
 }

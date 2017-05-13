@@ -6,7 +6,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\EasyNetQ.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\System.Reactive.Interfaces.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\Newtonsoft.Json.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\EasyNetQ.Rx.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\System.Reactive.Core.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.RabbitMqOutput\bin\Release\ClosedXML.dll

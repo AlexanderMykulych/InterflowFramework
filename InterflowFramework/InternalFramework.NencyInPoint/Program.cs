@@ -13,9 +13,9 @@ namespace InternalFramework.NencyInPoint
 	{
 		static void Main(string[] args)
 		{
-			PointFactory.In("nancy", () => new NancyInputPoint("Get", "/test", _ => "Hello Test!"));
-			PointFactory.In("nancy", () => new NancyInputPoint("Get", "/", _ => "Hello!"));
-			var inPoint = new NancyInputPoint("Get", "/new", _ => "Hello New!");
+			PointFactory.In("nancy", () => new NancyInputPoint("Get", "/test", (_, context) => "Hello Test!"));
+			PointFactory.In("nancy", () => new NancyInputPoint("Get", "/", (_, context) => "Hello!"));
+			var inPoint = new NancyInputPoint("Get", "/new", (_, context) => "Hello New!");
 			PointFactory.In("nancy", () => inPoint);
 			var hostConfig = new HostConfiguration();
 			hostConfig.UrlReservations.CreateAutomatically = true;
@@ -31,7 +31,7 @@ namespace InternalFramework.NencyInPoint
 				Console.WriteLine("Go");
 				Console.ReadKey();
 				Console.WriteLine("New");
-				inPoint.Action = _ => "Hello new 2!";
+				inPoint.Action = (_, context) => "Hello new 2!";
 				PointFactory.Enable("nancy");
 				Console.ReadKey();
 			}

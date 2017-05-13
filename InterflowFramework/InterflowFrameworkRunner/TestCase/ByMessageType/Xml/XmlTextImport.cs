@@ -1,6 +1,7 @@
 ﻿using InterflowFramework.Core.Message;
 using InterflowFramework.Core.Message.Interface;
 using InterflowFramework.Core.Message.Model.Html;
+using InterflowFramework.Core.Message.Model.Xml;
 using InterflowFrameworkRunner.TestProvider;
 using System;
 using System.Collections.Generic;
@@ -13,14 +14,14 @@ namespace InterflowFrameworkRunner.TestCase.ByMessageType.Html
 {
 	class XmlTextImport : ITest
 	{
-		IMessageRequestProvider requestProvider = new HtmlMessageRequestProvider();
+		IMessageRequestProvider requestProvider = new XmlMessageRequestProvider();
 		public void Execute()
 		{
 			var text = GetInputText();
 			var message = GetMessage(text);
 			var request1 = GetTestMessageRequest();
 			var response = message.ExecuteRequest(request1);
-			var textResponse = response as HtmlMessageRequestResponse;
+			var textResponse = response as XmlMessageRequestResponse;
 			if (textResponse != null)
 			{
 				textResponse
@@ -42,12 +43,12 @@ namespace InterflowFrameworkRunner.TestCase.ByMessageType.Html
 		}
 		protected IMessage GetMessage(string text)
 		{
-			var provider = new HtmlMessageProvider();
+			var provider = new XmlMessageProvider();
 			return provider.Create(text);
 		}
 		protected IMessageRequest GetTestMessageRequest()
 		{
-			return requestProvider.CreateRequest(@"xpath://a/@href");
+			return requestProvider.CreateRequest(@"xpath://book");
 		}
 	}
 }

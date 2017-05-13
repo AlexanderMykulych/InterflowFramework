@@ -5,7 +5,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyR
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\InterflowFramework.RabbitMq.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\InternalFramework.Nancy.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\EasyNetQ.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\System.Reactive.Interfaces.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\Newtonsoft.Json.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\ClosedXML.dll
@@ -18,7 +17,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyR
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\InterflowFramework.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\InterflowFramework.dll.config
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\InternalFramework.Nancy.pdb
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\System.Reactive.Interfaces.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\Newtonsoft.Json.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRabbitTransportServer\bin\Release\ClosedXML.xml

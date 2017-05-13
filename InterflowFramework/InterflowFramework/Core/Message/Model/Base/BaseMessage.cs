@@ -9,6 +9,18 @@ namespace InterflowFramework.Core.Message.Model.Base
 {
 	public abstract class BaseMessage : IMessage
 	{
+		private string _id;
+		public string Id {
+			get {
+				if(string.IsNullOrEmpty(_id)) {
+					_id = Guid.NewGuid().ToString();
+				}
+				return _id;
+			}
+			set {
+				_id = value;
+			}
+		}
 		public virtual void Deserealize(object serealizeObject)
 		{
 			throw new NotImplementedException();
@@ -28,5 +40,10 @@ namespace InterflowFramework.Core.Message.Model.Base
 			}
 		}
 		public abstract bool ValidateRequest(IMessageRequest request);
+
+		public string GetId()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

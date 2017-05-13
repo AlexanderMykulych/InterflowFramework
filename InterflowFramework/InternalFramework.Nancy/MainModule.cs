@@ -21,19 +21,20 @@ namespace InternalFramework.Nancy
 				return PointFactory.GetInPoints().Where(x => x is NancyInputPoint).Select(x => (NancyInputPoint)x);
 			}
 		}
-		public void InvokeNancyMethod(string method, string path, Func<dynamic, object> action) {
+		public void InvokeNancyMethod(string method, string path, Func<dynamic, NancyModule, object> action) {
+			Func<dynamic, object> baseAction = obj => action(obj, this);
 			switch(method) {
 				case "Get":
-					Get(path, action);
+					Get(path, baseAction);
 					break;
 				case "Put":
-					Put(path, action);
+					Put(path, baseAction);
 					break;
 				case "Post":
-					Post(path, action);
+					Post(path, baseAction);
 					break;
 				case "Delete":
-					Delete(path, action);
+					Delete(path, baseAction);
 					break;
 			}
 		}

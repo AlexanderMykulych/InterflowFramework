@@ -10,14 +10,9 @@ namespace InterflowFramework.Core.Message.Model.Text
 {
 	public class TextRequestExecutorProvider: BaseRequestExecutorProvider
 	{
-		protected static Dictionary<string, IRequestExecutor> executors = new Dictionary<string, IRequestExecutor>()
+		protected override Type GetExecutorAttributeType()
 		{
-			{ "regex", new TextRegexRequestExecutor() }
-		};
-		protected override Dictionary<string, IRequestExecutor> Executors {
-			get {
-				return executors;
-			}
+			return typeof(TextExecutorAttribute);
 		}
 	}
 }

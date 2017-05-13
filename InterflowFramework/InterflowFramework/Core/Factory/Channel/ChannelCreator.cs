@@ -71,6 +71,10 @@ namespace InterflowFramework.Core.Factory.Channel
 			}
 			return this;
 		}
+		public ChannelCreator InOut(string name)
+		{
+			return In(name).Out(name);
+		}
 		public ChannelCreator Transport(string name) {
 			return this;
 		}

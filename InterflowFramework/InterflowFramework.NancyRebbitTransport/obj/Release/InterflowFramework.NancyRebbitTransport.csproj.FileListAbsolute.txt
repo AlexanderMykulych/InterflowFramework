@@ -8,7 +8,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyR
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Nancy.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Nancy.Hosting.Self.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\EasyNetQ.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\System.Reactive.Interfaces.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Newtonsoft.Json.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\ClosedXML.dll
@@ -22,7 +21,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyR
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\InternalFramework.Nancy.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Nancy.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Nancy.Hosting.Self.xml
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\System.Reactive.Interfaces.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\Newtonsoft.Json.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework.NancyRebbitTransport\bin\Release\ClosedXML.xml

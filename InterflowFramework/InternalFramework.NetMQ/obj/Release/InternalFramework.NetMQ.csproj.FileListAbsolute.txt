@@ -32,3 +32,4 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.NetMQ\b
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.NetMQ\obj\Release\InternalFramework.NetMQ.csprojResolveAssemblyReference.cache
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.NetMQ\obj\Release\InternalFramework.NetMQ.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.NetMQ\obj\Release\InternalFramework.NetMQ.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.NetMQ\bin\Release\NetMQ.WebSockets.dll

@@ -11,13 +11,9 @@ namespace InterflowFramework.Core.Message.Model.Xml
 {
 	public class XmlRequestExecutorProvider : BaseRequestExecutorProvider
 	{
-		protected override Dictionary<string, IRequestExecutor> Executors {
-			get {
-				return executors;
-			}
+		protected override Type GetExecutorAttributeType()
+		{
+			return typeof(XmlExecutorAttribute);
 		}
-		protected static Dictionary<string, IRequestExecutor> executors = new Dictionary<string, IRequestExecutor>() {
-			{ "xpath", new XmlXPathRequestExecutor() }
-		};
 	}
 }

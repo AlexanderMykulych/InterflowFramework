@@ -16,9 +16,9 @@ namespace InternalFramework.Nancy.InputPoint
 		public string Path;
 		public bool IsReturn;
 		public object Response;
-		private Func<dynamic, object> _mainAction;
-		private Func<dynamic, object> _disabledAction;
-		public Func<dynamic, object> Action {
+		private Func<dynamic, NancyModule, object> _mainAction;
+		private Func<dynamic, NancyModule, object> _disabledAction;
+		public Func<dynamic, NancyModule, object> Action {
 			get {
 				if (Enabled) {
 					if (_mainAction == null) {
@@ -33,11 +33,11 @@ namespace InternalFramework.Nancy.InputPoint
 			}
 		}
 		public bool Enabled = false;
-		public NancyInputPoint(string method, string path, Func<dynamic, object> action) {
+		public NancyInputPoint(string method, string path, Func<dynamic, NancyModule, object> action = null) {
 			Method = method;
 			Path = path;
 			Action = action;
-			_disabledAction = _ => HttpStatusCode.NotFound;
+			_disabledAction = (_, context) => HttpStatusCode.NotFound;
 		}
 		public override void Push(object message)
 		{
@@ -53,11 +53,11 @@ namespace InternalFramework.Nancy.InputPoint
 			base.Disable();
 			Enabled = false;
 		}
-		public virtual object PushWithResponse(dynamic obj) {
+		public virtual object PushWithResponse(dynamic obj, NancyModule context) {
 			var message = new MessagePackage(obj, GetId());
 			IsReturn = false;
 			Response = null;
-			
+			message.SetAdditionalInfo(context);
 			Subscriber.Execute(InputPointEvent.onMessage, message);
 			var timeOutTask = Task.Run(() =>
 			{

@@ -11,13 +11,9 @@ namespace InterflowFramework.Core.Message.Model.Json
 {
 	public class JsonRequestExecutorProvider : BaseRequestExecutorProvider
 	{
-		protected override Dictionary<string, IRequestExecutor> Executors {
-			get {
-				return executors;
-			}
+		protected override Type GetExecutorAttributeType()
+		{
+			return typeof(JsonExecutorAttribute);
 		}
-		protected static Dictionary<string, IRequestExecutor> executors = new Dictionary<string, IRequestExecutor>() {
-			{ "jpaths", new JsonJPathRequestExecutor() }
-		};
 	}
 }
