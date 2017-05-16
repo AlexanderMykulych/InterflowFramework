@@ -1,0 +1,8 @@
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\bin\Release\Runner.ElasticSearchLowLevelClient.exe.config
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\bin\Release\Runner.ElasticSearchLowLevelClient.exe
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\bin\Release\Runner.ElasticSearchLowLevelClient.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\bin\Release\Elasticsearch.Net.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\bin\Release\Elasticsearch.Net.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\obj\Release\Runner.ElasticSearchLowLevelClient.csprojResolveAssemblyReference.cache
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\obj\Release\Runner.ElasticSearchLowLevelClient.exe
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.ElasticSearchLowLevelClient\obj\Release\Runner.ElasticSearchLowLevelClient.pdb

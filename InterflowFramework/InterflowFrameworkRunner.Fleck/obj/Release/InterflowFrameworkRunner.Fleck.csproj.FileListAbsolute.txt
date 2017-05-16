@@ -26,3 +26,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\InterflowFramework.RabbitMq.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\InterflowFramework.RabbitMq.dll.config
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\RabbitMQ.Client.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\InternalFramework.ElasticSearch.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\Elasticsearch.Net.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\InternalFramework.ElasticSearch.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Release\Elasticsearch.Net.xml

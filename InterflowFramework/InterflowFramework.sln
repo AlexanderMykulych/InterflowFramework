@@ -47,13 +47,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner.Na
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{39A94771-346C-4261-9BC4-4249325B277B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJs-NancyOwin-ConsoleWebHost", "WebJs-NancyOwin-ConsoleWebHost\WebJs-NancyOwin-ConsoleWebHost.csproj", "{265029AE-1857-437D-9C58-079820EE1ECA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_WebJs-Fleck-ConsoleWebHost-RabbitMq", "WebJs-NancyOwin-ConsoleWebHost\1_WebJs-Fleck-ConsoleWebHost-RabbitMq.csproj", "{265029AE-1857-437D-9C58-079820EE1ECA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalFramework.Fleck", "InternalFramework.Fleck\InternalFramework.Fleck.csproj", "{190BAAD0-D55A-4D06-8E08-0C3164E890B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner.Fleck", "InterflowFrameworkRunner.Fleck\InterflowFrameworkRunner.Fleck.csproj", "{2245C357-D215-4062-9256-F302BD04C5B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalFramework.ElasticSearch", "InternalFramework.ElasticSearch\InternalFramework.ElasticSearch.csproj", "{9239B02B-C34D-402F-B63B-4381DF4F77DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner.ElasticSearchLowLevelClient", "Runner.ElasticSearchLowLevelClient\Runner.ElasticSearchLowLevelClient.csproj", "{7B3726FD-68B9-484D-AE42-A3D1EE6770F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_RabbitMq-Mapping-ElasticSearch", "1_RabbitMq-Mapping-ElasticSearch\1_RabbitMq-Mapping-ElasticSearch.csproj", "{B0711CD7-E905-4B52-B498-6944CE5105D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,14 @@ Global
 		{9239B02B-C34D-402F-B63B-4381DF4F77DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9239B02B-C34D-402F-B63B-4381DF4F77DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9239B02B-C34D-402F-B63B-4381DF4F77DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3726FD-68B9-484D-AE42-A3D1EE6770F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3726FD-68B9-484D-AE42-A3D1EE6770F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3726FD-68B9-484D-AE42-A3D1EE6770F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3726FD-68B9-484D-AE42-A3D1EE6770F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0711CD7-E905-4B52-B498-6944CE5105D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0711CD7-E905-4B52-B498-6944CE5105D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0711CD7-E905-4B52-B498-6944CE5105D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0711CD7-E905-4B52-B498-6944CE5105D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,5 +185,7 @@ Global
 		{008325FE-6B35-41C5-8154-342794AB6D9B} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
 		{265029AE-1857-437D-9C58-079820EE1ECA} = {39A94771-346C-4261-9BC4-4249325B277B}
 		{2245C357-D215-4062-9256-F302BD04C5B5} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
+		{7B3726FD-68B9-484D-AE42-A3D1EE6770F0} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
+		{B0711CD7-E905-4B52-B498-6944CE5105D8} = {39A94771-346C-4261-9BC4-4249325B277B}
 	EndGlobalSection
 EndGlobal

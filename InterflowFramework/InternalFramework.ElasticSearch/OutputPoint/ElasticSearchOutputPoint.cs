@@ -5,33 +5,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Elasticsearch.Net;
-using Nest;
 
 namespace InternalFramework.ElasticSearch.OutputPoint
 {
 	public class ElasticSearchOutputPoint : BaseOutputPoint
 	{
 		public string ConnectionString;
-		public string DefaultIndex;
-		private ElasticClient _client;
-		public ElasticClient Client {
+		public string Index;
+		public string Type;
+		private ElasticLowLevelClient _client;
+		public ElasticLowLevelClient Client {
 			get {
 				if (_client == null) {
-					_client = new ElasticClient(new ConnectionSettings(new Uri(ConnectionString)));
+					if (string.IsNullOrEmpty(ConnectionString))
+					{
+						_client = new ElasticLowLevelClient();
+					}
+					else
+					{
+						_client = new ElasticLowLevelClient(new ConnectionConfiguration(new Uri(ConnectionString)));
+					}
 				}
 				return _client;
 			}
 		}
-		public ElasticSearchOutputPoint(string connectionString = @"http://localhost:9200", string defaultIndex = "my-application") {
+		public ElasticSearchOutputPoint(string connectionString = null, string index = "default", string type = "default") {
 			ConnectionString = connectionString;
-			DefaultIndex = defaultIndex;
+			Index = index;
+			Type = type;
 		}
 		public override void Push(object message)
 		{
-			if(IsEnabled) {
+			if(!IsEnabled) {
 				return;
 			}
-			Client.Index(message);
+			Client.Index<byte[]>(Index, Type, Guid.NewGuid().ToString(), message);
 		}
 	}
 }

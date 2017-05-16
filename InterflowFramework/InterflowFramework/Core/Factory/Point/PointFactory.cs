@@ -51,10 +51,13 @@ namespace InterflowFramework.Core.Factory.PointFactory
 				list.Add(info);
 			}
 		}
-		public static void PushIn(string name, object message) {
+		public static void PushIn(string name, object message, Func<object, bool> validator = null) {
 			var points = GetInPoints(name);
 			if(points != null) {
-				points.ForEach(point => SafePush(point, message));
+				if (validator == null || validator(message))
+				{
+					points.ForEach(point => SafePush(point, message));
+				}
 			}
 		}
 		public static IEnumerable<IInputPoint> GetInPoints(string name = null) {
