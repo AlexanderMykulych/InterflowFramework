@@ -21,7 +21,11 @@ namespace InterflowFramework.RabbitMq.Transport
 		private bool PushEnable;
 		private bool SubscribeEnable;
 		private bool CatchResponse;
-
+		public JsonSerializerSettings SerializeSetting = new JsonSerializerSettings()
+		{
+			PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+			TypeNameHandling = TypeNameHandling.All
+		};
 		public IBus Bus {
 			get {
 				if(_bus == null && !string.IsNullOrEmpty(ConnectionString)) {
@@ -57,12 +61,10 @@ namespace InterflowFramework.RabbitMq.Transport
 			Bus.Receive<RabbitMessage>(id.GetId(), message => onResponse(message));
 		}
 
-		
-
 		protected virtual RabbitMessage SerializeMessage(object message)
 		{
 			return new RabbitMessage() {
-				Data = JsonConvert.SerializeObject(message),
+				Data = JsonConvert.SerializeObject(message, SerializeSetting),
 				Type = message.GetType().AssemblyQualifiedName
 			};
 		}
@@ -98,7 +100,7 @@ namespace InterflowFramework.RabbitMq.Transport
 			
 		}
 		protected virtual object DeserializeMessage(string message, string type) {
-			var res = JsonConvert.DeserializeObject(message, Type.GetType(type));
+			var res = JsonConvert.DeserializeObject(message, SerializeSetting);
 			return res;
 		}
 

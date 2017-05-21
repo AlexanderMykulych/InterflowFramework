@@ -11,12 +11,11 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Factory.PointFactory
 {
-	public static class PointFactory
+	public class PointFactory
 	{
 		private static ConcurrentDictionary<string, List<InPointCreateInfo>> _factoryListIn = new ConcurrentDictionary<string, List<InPointCreateInfo>>();
 		private static ConcurrentDictionary<string, List<OutPointCreateInfo>> _factoryListOut = new ConcurrentDictionary<string, List<OutPointCreateInfo>>();
-		public static void In(string name, Func<IInputPoint> creator, bool singleton = true)
-		{
+		public static void In(string name, Func<IInputPoint> creator, bool singleton = true) {
 			var info = new InPointCreateInfo()
 			{
 				Creator = creator,
@@ -32,6 +31,15 @@ namespace InterflowFramework.Core.Factory.PointFactory
 			{
 				list.Add(info);
 			}
+		}
+		public PointFactory _In(string name, Func<IInputPoint> creator, bool singleton = true)
+		{
+			In(name, null, false);
+			return this;
+		}
+		public PointFactory _Out(string name, Func<IOutputPoint> creator, bool singleton = true) {
+			Out(name, creator, singleton);
+			return this;
 		}
 		public static void Out(string name, Func<IOutputPoint> creator, bool singleton = true)
 		{
@@ -51,7 +59,13 @@ namespace InterflowFramework.Core.Factory.PointFactory
 				list.Add(info);
 			}
 		}
-		public static void PushIn(string name, object message, Func<object, bool> validator = null) {
+		public PointFactory _PushIn(string name, object message, Func<object, bool> validator = null)
+		{
+			PushIn(name, message, validator);
+			return this;
+		}
+		public static void PushIn(string name, object message, Func<object, bool> validator = null)
+		{
 			var points = GetInPoints(name);
 			if(points != null) {
 				if (validator == null || validator(message))
@@ -59,6 +73,7 @@ namespace InterflowFramework.Core.Factory.PointFactory
 					points.ForEach(point => SafePush(point, message));
 				}
 			}
+			return;
 		}
 		public static IEnumerable<IInputPoint> GetInPoints(string name = null) {
 			if(!string.IsNullOrEmpty(name) && _factoryListIn.ContainsKey(name)) {
@@ -73,6 +88,11 @@ namespace InterflowFramework.Core.Factory.PointFactory
 					.SelectMany(x => x.Value.Select(y => y.GetPoint())).ToList();
 			}
 			return null;
+		}
+		public PointFactory _Enable(params string[] points)
+		{
+			Enable(points);
+			return this;
 		}
 		public static void Enable(params string[] points) {
 			points.ForEach(name => GetInPoints(name).ForEach(point => point.Enable()));

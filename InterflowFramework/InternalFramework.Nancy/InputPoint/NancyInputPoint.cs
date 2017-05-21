@@ -16,6 +16,7 @@ namespace InternalFramework.Nancy.InputPoint
 		public string Path;
 		public bool IsReturn;
 		public object Response;
+		public bool SetContextInfo;
 		private Func<dynamic, NancyModule, object> _mainAction;
 		private Func<dynamic, NancyModule, object> _disabledAction;
 		public Func<dynamic, NancyModule, object> Action {
@@ -33,11 +34,12 @@ namespace InternalFramework.Nancy.InputPoint
 			}
 		}
 		public bool Enabled = false;
-		public NancyInputPoint(string method, string path, Func<dynamic, NancyModule, object> action = null) {
+		public NancyInputPoint(string method, string path, Func<dynamic, NancyModule, object> action = null, bool setContextInfo = true) {
 			Method = method;
 			Path = path;
 			Action = action;
 			_disabledAction = (_, context) => HttpStatusCode.NotFound;
+			SetContextInfo = setContextInfo;
 		}
 		public override void Push(object message)
 		{
@@ -54,22 +56,28 @@ namespace InternalFramework.Nancy.InputPoint
 			Enabled = false;
 		}
 		public virtual object PushWithResponse(dynamic obj, NancyModule context) {
-			var message = new MessagePackage(obj, GetId());
-			IsReturn = false;
-			Response = null;
-			message.SetAdditionalInfo(context);
-			Subscriber.Execute(InputPointEvent.onMessage, message);
-			var timeOutTask = Task.Run(() =>
-			{
-				Thread.Sleep(30000);
-			});
-			while(!IsReturn && !timeOutTask.IsCompleted) {
+			if (obj is DynamicDictionary) {
+				var message = new MessagePackage(((DynamicDictionary)obj).ToDictionary(), GetId());
+				IsReturn = false;
+				Response = null;
+				if (SetContextInfo)
+				{
+					message.SetAdditionalInfo(context);
+				}
+				Subscriber.Execute(InputPointEvent.onMessage, message);
+				var timeOutTask = Task.Run(() =>
+				{
+					Thread.Sleep(30000);
+				});
+				while (!IsReturn && !timeOutTask.IsCompleted) {
+				}
+				if (Response != null && Response is MessagePackage) {
+					message = (MessagePackage)Response;
+					return message.Object;
+				}
+				return HttpStatusCode.RequestTimeout; 
 			}
-			if(Response != null && Response is MessagePackage) {
-				message = (MessagePackage)Response;
-				return message.Object;
-			}
-			return HttpStatusCode.RequestTimeout;
+			return HttpStatusCode.NotFound;
 		}
 		public override void Message(object message)
 		{

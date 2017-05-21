@@ -21,7 +21,7 @@ namespace WebJs_NancyOwin_ConsoleWebHost
 		{
 			PointFactory.In("fleck", () => new FleckInputPoint("ws://0.0.0.0:8081"));
 
-			var channel = new ChannelCreator()
+			var channel = new MessageChannelCreator()
 				.InOut("fleck")
 				.Transport(new RabbitMqTransport("host=localhost", "network", pushToRabbitEnable: true, subscribeRabbitEnable: false, catchResponse: false))
 				.Create();

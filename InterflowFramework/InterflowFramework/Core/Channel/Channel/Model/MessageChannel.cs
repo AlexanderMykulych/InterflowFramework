@@ -22,16 +22,18 @@ namespace InterflowFramework.Core.Channel.Model
 			point.On(InputPointEvent.onMessage, onInputPointMessage);
 		}
 
-		private void onInputPointMessage(object obj)
+		protected virtual void onInputPointMessage(object obj)
 		{
 			Transport.Push(obj);
 		}
 
 		protected override void ConfigurateOutputPointSubscribe(IOutputPoint point)
 		{
-			point.On(OutputPointEvent.OnResponse, message => Transport.Response(message));
+			point.On(OutputPointEvent.OnResponse, onOutputPointResponse);
 		}
-
+		protected virtual void onOutputPointResponse(object obj) {
+			Transport.Response(obj);
+		}
 		protected override void ConfigurateTransport()
 		{
 			Transport
@@ -41,7 +43,7 @@ namespace InterflowFramework.Core.Channel.Model
 				.On(TransportEvent.onResponse, OnTransportResponse);
 		}
 
-		private void OnTransportResponse(object obj)
+		protected virtual void OnTransportResponse(object obj)
 		{
 			if(obj is IIdentified) {
 				var identified = (IIdentified)obj;

@@ -19,4 +19,3 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\De
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\EntityFramework.SqlServer.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\LinqKit.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\bin\Debug\protobuf-net.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFramework\obj\Debug\InterflowFramework.csprojResolveAssemblyReference.cache

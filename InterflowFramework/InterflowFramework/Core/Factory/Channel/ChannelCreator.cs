@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Factory.Channel
 {
-	public class ChannelCreator
+	public abstract class ChannelCreator<T, Creator> where T: IChannel where Creator: ChannelCreator<T,Creator>
 	{
-		private string _name;
-		private List<IInputPoint> _inPoints;
+		protected string _name;
+		protected List<IInputPoint> _inPoints;
 		public List<IInputPoint> InPoints {
 			get {
 				if(_inPoints == null) {
@@ -23,7 +23,7 @@ namespace InterflowFramework.Core.Factory.Channel
 				return _inPoints;
 			}
 		}
-		private List<IOutputPoint> _outPoints;
+		protected List<IOutputPoint> _outPoints;
 		public List<IOutputPoint> OutPoints {
 			get {
 				if (_outPoints == null)
@@ -33,65 +33,58 @@ namespace InterflowFramework.Core.Factory.Channel
 				return _outPoints;
 			}
 		}
-		private ITransport _transport;
-		public ChannelCreator Is(string name, bool singleton = true) {
+		protected ITransport _transport;
+		public Creator Is(string name, bool singleton = true) {
 			_name = name;
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator In(string name)
+		public Creator In(string name)
 		{
 			var points = PointFactory.PointFactory.GetInPoints(name);
 			if(points != null && points.Any()) {
 				InPoints.AddRange(points);
 			}
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator In(IInputPoint point)
+		public Creator In(IInputPoint point)
 		{
 			if (point != null)
 			{
 				InPoints.Add(point);
 			}
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator Out(string name)
+		public Creator Out(string name)
 		{
 			var points = PointFactory.PointFactory.GetOutPoints(name);
 			if (points != null && points.Any())
 			{
 				OutPoints.AddRange(points);
 			}
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator Out(IOutputPoint point)
+		public Creator Out(IOutputPoint point)
 		{
 			if (point != null)
 			{
 				OutPoints.Add(point);
 			}
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator InOut(string name)
+		public Creator InOut(string name)
 		{
 			return In(name).Out(name);
 		}
-		public ChannelCreator Transport(string name) {
-			return this;
+		public Creator Transport(string name) {
+			return (Creator)this;
 		}
-		public ChannelCreator Transport(ITransport transport) {
+		public Creator Transport(ITransport transport) {
 			_transport = transport;
-			return this;
+			return (Creator)this;
 		}
-		public ChannelCreator Serializer(string name) {
-			return this;
+		public Creator Serializer(string name) {
+			return (Creator)this;
 		}
-		public IChannel Create() {
-			return new MessageChannel()
-			{
-				InputPoints = _inPoints,
-				OutputPoints = _outPoints,
-				Transport = _transport
-			};
-		}
+		public abstract IChannel Create();
 	}
 }

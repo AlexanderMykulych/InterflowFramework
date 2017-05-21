@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="InputPoint\MessagePackage.cs" />
     <Compile Include="InputPoint\NancyInputPoint.cs" />
+    <Compile Include="InputPoint\NancyResponse.cs" />
     <Compile Include="MainModule.cs" />
     <Compile Include="OutputPoint\ResponseOutputPoint.cs" />
     <Compile Include="OutputPoint\ReturOutputPoint.cs" />
+    <Compile Include="Packer\NancyUnpacker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,5 +61,6 @@
       <Name>InterflowFramework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

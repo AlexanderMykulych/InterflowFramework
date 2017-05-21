@@ -20,8 +20,7 @@ namespace InterflowFramework.NancyReturnOutPoint
 			PointFactory.Out("nancy", () => new ReturnOutputPoint("Hello world!!!"));
 			var channel = new ChannelCreator()
 				.Is("Test")
-				.In("nancy")
-				.Out("nancy")
+				.InOut("nancy")
 				.Transport(new InlineTransport())
 				.Create();
 
