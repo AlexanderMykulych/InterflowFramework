@@ -1,6 +1,5 @@
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Elasticsearch.Net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InterflowFramework.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Nest.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Newtonsoft.Json.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\HtmlAgilityPack.dll
@@ -8,10 +7,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.Elastic
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InterflowFramework.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InterflowFramework.dll.config
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Elasticsearch.Net.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Elasticsearch.Net.xml
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Nest.pdb
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Nest.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Newtonsoft.Json.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\HtmlAgilityPack.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\HtmlAgilityPack.xml
@@ -22,3 +18,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.Elastic
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\obj\Debug\InternalFramework.ElasticSearch.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InternalFramework.ElasticSearch.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InternalFramework.ElasticSearch.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Nest.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\Nest.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InternalFramework.ElasticSearch\bin\Debug\InternalFramework.ElasticSearch.dll.config

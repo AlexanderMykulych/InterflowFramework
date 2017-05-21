@@ -1,4 +1,5 @@
 ﻿using _1_RabbitMq_Mapping_ElasticSearch.Mapping;
+using Nest;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
@@ -90,12 +91,31 @@ namespace WebJs_NancyOwin_ConsoleWebHost.Mapping.requestWillBeSent
 		public string mixedContentType { get; set; }
 		public string referrerPolicy { get; set; }
 		public string url { get; set; }
+		//[GeoPoint]
+		//public GeoLocation Coordinates {
+		//	get {
+		//		return GeoUtil.GetByUrl(url);
+		//	}
+		//	set {
+		//		return;
+		//	}
+		//}
+		//[GeoPoint(IgnoreMalformed = true)]
+		//public GeoLocation Coordinates2 {
+		//	get {
+		//		return GeoUtil.GetByUrl(url);
+		//	}
+		//	set {
+		//		return;
+		//	}
+		//}
 	}
-
+	
 	public class Headers
 	{
 		public string Origin { get; set; }
 		public string Referer { get; set; }
+		[JsonProperty("User-Agent")]
 		public string UserAgent { get; set; }
 	}
 

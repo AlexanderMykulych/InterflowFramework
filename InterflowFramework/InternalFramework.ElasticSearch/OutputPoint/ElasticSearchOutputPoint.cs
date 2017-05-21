@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Elasticsearch.Net;
+using Nest;
 
 namespace InternalFramework.ElasticSearch.OutputPoint
 {
@@ -13,10 +14,12 @@ namespace InternalFramework.ElasticSearch.OutputPoint
 		public string ConnectionString;
 		public string Index;
 		public string Type;
+		public bool IsLowLevelClient;
 		private ElasticLowLevelClient _client;
-		public ElasticLowLevelClient Client {
+		public ElasticLowLevelClient LowLevelClient {
 			get {
-				if (_client == null) {
+				if (_client == null)
+				{
 					if (string.IsNullOrEmpty(ConnectionString))
 					{
 						_client = new ElasticLowLevelClient();
@@ -29,17 +32,44 @@ namespace InternalFramework.ElasticSearch.OutputPoint
 				return _client;
 			}
 		}
-		public ElasticSearchOutputPoint(string connectionString = null, string index = "default", string type = "default") {
+		private ElasticClient _highLevelClient;
+		public ElasticClient HighLevelClient {
+			get {
+				if (_highLevelClient == null)
+				{
+					if (string.IsNullOrEmpty(ConnectionString))
+					{
+						_highLevelClient = new ElasticClient();
+					}
+					else
+					{
+						_highLevelClient = new ElasticClient(new ConnectionSettings(new Uri(ConnectionString)).DefaultIndex(Index));
+					}
+				}
+				return _highLevelClient;
+			}
+		}
+		public ElasticSearchOutputPoint(string connectionString = null, string index = "default", string type = "default", bool lowLevelClient = true)
+		{
 			ConnectionString = connectionString;
 			Index = index;
 			Type = type;
+			IsLowLevelClient = lowLevelClient;
 		}
 		public override void Push(object message)
 		{
-			if(!IsEnabled) {
+			if (!IsEnabled)
+			{
 				return;
 			}
-			Client.Index<byte[]>(Index, Type, Guid.NewGuid().ToString(), message);
+			if (IsLowLevelClient)
+			{
+				LowLevelClient.Index<byte[]>(Index, Type, Guid.NewGuid().ToString(), message);
+			}
+			else
+			{
+				HighLevelClient.Index(message);
+			}
 		}
 	}
 }

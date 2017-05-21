@@ -18,7 +18,7 @@ namespace _1_RabbitMq_Mapping_ElasticSearch
 	{
 		static void Main(string[] args)
 		{
-			PointFactory.Out("elasticSearch", () => new ElasticSearchOutputPoint(null, "statistic_test4", "network"));
+			PointFactory.Out("elasticSearch", () => new ElasticSearchOutputPoint("http://localhost:9200", "statistic", "network"));
 			PointFactory.In("simple", () => new SimpleInputPoint());
 			PointFactory.Out("simple", () => new InlineOutputPoint(obj => PointFactory.PushIn("simple", MappThatObject(obj), x => x != null)));
 
