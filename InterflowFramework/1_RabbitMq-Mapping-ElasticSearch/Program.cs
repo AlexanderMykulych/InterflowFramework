@@ -22,14 +22,14 @@ namespace _1_RabbitMq_Mapping_ElasticSearch
 			PointFactory.In("simple", () => new SimpleInputPoint());
 			PointFactory.Out("simple", () => new InlineOutputPoint(obj => PointFactory.PushIn("simple", MappThatObject(obj), x => x != null)));
 
-			new ChannelCreator()
+			new MessageChannelCreator()
 				.Transport(new InlineTransport())
 				.In("simple")
 				.Out("elasticSearch")
 				.Create()
 				.Enable();
 
-			new ChannelCreator()
+			new MessageChannelCreator()
 				.Transport(new RabbitMqTransport("host=localhost", "network", false, true))
 				.Out("simple")
 				.Create()

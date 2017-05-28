@@ -21,7 +21,7 @@ namespace InterflowFrameworkRunner.Fleck
 			PointFactory.Out("fleck", () => new InlineOutputPoint(msg => Console.WriteLine(msg)));
 			PointFactory.Out("fleck", () => new ElasticSearchOutputPoint(null, "statistic3", "network"));
 
-			var channel = new ChannelCreator()
+			var channel = new MessageChannelCreator()
 				.InOut("fleck")
 				.Transport(new RabbitMqTransport("host=localhost", "network", pushToRabbitEnable: true, subscribeRabbitEnable: true, catchResponse: false))
 				.Create();

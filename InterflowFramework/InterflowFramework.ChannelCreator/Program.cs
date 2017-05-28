@@ -31,7 +31,7 @@ namespace InterflowFramework.ChannelCreatorRunner
 
 		private static IChannel RegisterChannel()
 		{
-			return new ChannelCreator()
+			return new MessageChannelCreator()
 				.In("telegram")
 				.Out("console")
 				.Transport(new InlineTransport())

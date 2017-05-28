@@ -34,7 +34,7 @@ namespace InterflowFramework.Core.Factory.PointFactory
 		}
 		public PointFactory _In(string name, Func<IInputPoint> creator, bool singleton = true)
 		{
-			In(name, null, false);
+			In(name, creator, singleton);
 			return this;
 		}
 		public PointFactory _Out(string name, Func<IOutputPoint> creator, bool singleton = true) {

@@ -16,7 +16,7 @@ namespace InterflowFramework.NancyRabbitTransportServer
 		static void Main(string[] args)
 		{
 			PointFactory.Out("nancy", () => new ReturnOutputPoint(Process.GetCurrentProcess().Id.ToString()));
-			var channelOutput = new ChannelCreator()
+			var channelOutput = new MessageChannelCreator()
 				.Is("Test2")
 				.Out("nancy")
 				.Transport(new RabbitMqTransport("host=localhost", "test", false, true))

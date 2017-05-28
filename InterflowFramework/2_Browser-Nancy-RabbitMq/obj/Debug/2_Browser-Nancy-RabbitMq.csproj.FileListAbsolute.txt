@@ -29,3 +29,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\obj\Debug\2_Browser-Nancy-RabbitMq.csprojResolveAssemblyReference.cache
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\obj\Debug\2_Browser-Nancy-RabbitMq.exe
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\obj\Debug\2_Browser-Nancy-RabbitMq.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\bin\Debug\MimeMapping.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\2_Browser-Nancy-RabbitMq\bin\Debug\MimeMapping.xml

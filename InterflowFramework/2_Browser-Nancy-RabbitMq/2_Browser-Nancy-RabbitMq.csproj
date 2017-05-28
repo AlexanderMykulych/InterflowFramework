@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MimeMapping, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeMapping.0.1.5\lib\netstandard1.1\MimeMapping.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.2.0.0-clinteastwood\lib\net452\Nancy.dll</HintPath>
     </Reference>
@@ -39,7 +42,13 @@
       <HintPath>..\packages\Nancy.Hosting.Self.2.0.0-clinteastwood\lib\net452\Nancy.Hosting.Self.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +80,39 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\AsyncUsageAnalyzers.1.0.0-alpha003\analyzers\dotnet\AsyncUsageAnalyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Files\images\1.jpg" />
+    <Content Include="bin\Debug\Files\images\2.jpg" />
+    <Content Include="bin\Debug\Files\images\4.jpg" />
+    <Content Include="bin\Debug\Files\images\5.jpg" />
+    <Content Include="bin\Debug\Files\images\6.jpg" />
+    <Content Include="bin\Debug\Files\images\7.jpg" />
+    <Content Include="bin\Debug\Files\images\apple-touch-icon.png" />
+    <Content Include="bin\Debug\Files\images\author.png" />
+    <Content Include="bin\Debug\Files\images\favicon.ico" />
+    <Content Include="bin\Debug\Files\images\grabbing.png" />
+    <Content Include="bin\Debug\Files\images\my-pic.png" />
+    <Content Include="bin\Debug\Files\images\pattern-bg.png" />
+    <Content Include="bin\Debug\Files\js\jquery.min.js" />
+    <Content Include="bin\Debug\Files\css\mystyle.css" />
+    <Content Include="bin\Debug\Files\css\plugin.css" />
+    <Content Include="bin\Debug\Files\js\plugin.js" />
+    <Content Include="bin\Debug\Files\js\scripts.js" />
+    <Content Include="bin\Debug\Files\js\shBrushCss.js" />
+    <Content Include="bin\Debug\Files\js\shBrushJScript.js" />
+    <Content Include="bin\Debug\Files\js\shBrushPerl.js" />
+    <Content Include="bin\Debug\Files\js\shBrushPhp.js" />
+    <Content Include="bin\Debug\Files\js\shBrushPlain.js" />
+    <Content Include="bin\Debug\Files\js\shBrushPython.js" />
+    <Content Include="bin\Debug\Files\js\shBrushRuby.js" />
+    <Content Include="bin\Debug\Files\js\shBrushSql.js" />
+    <Content Include="bin\Debug\Files\js\shBrushVb.js" />
+    <Content Include="bin\Debug\Files\js\shBrushXml.js" />
+    <Content Include="bin\Debug\Files\css\shCore.css" />
+    <Content Include="bin\Debug\Files\js\shCore.js" />
+    <Content Include="bin\Debug\Files\css\shThemeDefault.css" />
+    <Content Include="bin\Debug\Files\css\style.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

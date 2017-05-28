@@ -18,7 +18,7 @@ namespace InterflowFramework.NancyRebbitTransport
 		static void Main(string[] args)
 		{
 			PointFactory.In("nancy", () => new NancyInputPoint("Get", "/test", null));
-			var channelInput = new ChannelCreator()
+			var channelInput = new MessageChannelCreator()
 				.Is("Test")
 				.In("nancy")
 				.Transport(new RabbitMqTransport("host=localhost", "test", true, false, true))
