@@ -12,8 +12,8 @@ namespace InterflowFramework.Core.Factory.Channel
 	public class PackedMessageChannelCreator : ChannelCreator<PackedMessageChannel, PackedMessageChannelCreator>
 	{
 		private Action<PackedMessageChannel> _packerSetter;
-		public PackedMessageChannelCreator Packers(IPacker packer = null, IUnpacker unpacker = null, IPacker responsePacker = null, IUnpacker responseUnpacker = null) {
-			_packerSetter = channel => channel.SetPackagers(packer, unpacker, responsePacker, responseUnpacker);
+		public PackedMessageChannelCreator Packers(IPacker inToTrasport = null, IPacker transportToOut = null, IPacker outToTransport = null, IPacker transportToIn = null) {
+			_packerSetter = channel => channel.SetPackagers(inToTrasport, transportToOut, outToTransport, transportToIn);
 			return this;
 		}
 		public override IChannel Create()

@@ -31,3 +31,7 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-Elasti
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\obj\Debug\1_RabbitMq-Mapping-ElasticSearch.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\bin\Debug\InternalFramework.ElasticSearch.dll.config
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\obj\Debug\1_RabbitMq-Mapping-ElasticSearch.csproj.1_RabbitMq-Mapping-ElasticSearch.exe.config
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\bin\Debug\RazorEngine.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\bin\Debug\System.Web.Razor.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\bin\Debug\RazorEngine.xml
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\1_RabbitMq-Mapping-ElasticSearch\bin\Debug\System.Web.Razor.xml

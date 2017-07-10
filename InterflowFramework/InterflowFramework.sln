@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework", "InterflowFramework\InterflowFramework.csproj", "{06B978F7-7D9A-4D1A-A2BF-1BE33465A0F1}"
 EndProject
@@ -64,6 +64,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_Browser-Nancy-RabbitMq", "2_Browser-Nancy-RabbitMq\2_Browser-Nancy-RabbitMq.csproj", "{90F26E86-26EB-4121-BDF2-0B88E596B2C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_RabbitMq-Console", "2_RabbitMq-Console\2_RabbitMq-Console.csproj", "{2E9155BB-1211-43F3-9B97-FF0C0B1396BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFramework.ServiceStack", "InterflowFramework.HttpWeb\InterflowFramework.ServiceStack.csproj", "{E6D5E68A-96EE-41CE-9074-F0074CA7FE66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceStack", "ServiceStack", "{1D8E6C45-D822-4DC1-8BB9-6B4E80F2E058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner.JsonPostServiceOutPoint", "InterflowFrameworkRunner.JsonPostServiceOutPoint\InterflowFrameworkRunner.JsonPostServiceOutPoint.csproj", "{71406318-199A-4209-A91F-8DEDA43D2631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterflowFrameworkRunner.JsonPostServiceOutPointWithPacker", "InterflowFrameworkRunner.JsonPostServiceOutPointWithPacker\InterflowFrameworkRunner.JsonPostServiceOutPointWithPacker.csproj", "{06405EFF-C1F3-4D92-8774-9FFA36E34234}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +191,18 @@ Global
 		{2E9155BB-1211-43F3-9B97-FF0C0B1396BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E9155BB-1211-43F3-9B97-FF0C0B1396BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E9155BB-1211-43F3-9B97-FF0C0B1396BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D5E68A-96EE-41CE-9074-F0074CA7FE66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D5E68A-96EE-41CE-9074-F0074CA7FE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D5E68A-96EE-41CE-9074-F0074CA7FE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D5E68A-96EE-41CE-9074-F0074CA7FE66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71406318-199A-4209-A91F-8DEDA43D2631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71406318-199A-4209-A91F-8DEDA43D2631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71406318-199A-4209-A91F-8DEDA43D2631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71406318-199A-4209-A91F-8DEDA43D2631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06405EFF-C1F3-4D92-8774-9FFA36E34234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06405EFF-C1F3-4D92-8774-9FFA36E34234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06405EFF-C1F3-4D92-8774-9FFA36E34234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06405EFF-C1F3-4D92-8774-9FFA36E34234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -208,5 +228,8 @@ Global
 		{E05B6B46-D7B3-4B7D-ADAB-B729EC522A6A} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
 		{90F26E86-26EB-4121-BDF2-0B88E596B2C9} = {39A94771-346C-4261-9BC4-4249325B277B}
 		{2E9155BB-1211-43F3-9B97-FF0C0B1396BC} = {39A94771-346C-4261-9BC4-4249325B277B}
+		{1D8E6C45-D822-4DC1-8BB9-6B4E80F2E058} = {EC5B7ED9-69B8-4A91-BE23-C762618D0954}
+		{71406318-199A-4209-A91F-8DEDA43D2631} = {1D8E6C45-D822-4DC1-8BB9-6B4E80F2E058}
+		{06405EFF-C1F3-4D92-8774-9FFA36E34234} = {1D8E6C45-D822-4DC1-8BB9-6B4E80F2E058}
 	EndGlobalSection
 EndGlobal

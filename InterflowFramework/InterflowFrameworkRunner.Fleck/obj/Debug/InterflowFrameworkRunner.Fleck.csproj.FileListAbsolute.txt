@@ -11,7 +11,6 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\protobuf-net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\HtmlAgilityPack.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\ClosedXML.dll
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Elasticsearch.Net.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Fleck.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\RabbitMQ.Client.dll
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\DocumentFormat.OpenXml.dll
@@ -26,8 +25,9 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\HtmlAgilityPack.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\ClosedXML.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\ClosedXML.xml
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Elasticsearch.Net.pdb
-C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Elasticsearch.Net.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\RabbitMQ.Client.xml
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\obj\Debug\InterflowFrameworkRunner.Fleck.exe
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\obj\Debug\InterflowFrameworkRunner.Fleck.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Nest.dll
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\InternalFramework.ElasticSearch.dll.config
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\InterflowFrameworkRunner.Fleck\bin\Debug\Nest.xml

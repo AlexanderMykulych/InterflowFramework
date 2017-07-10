@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Channel.Packer.Model
 {
-	public class JsonPacker : IPacker, IUnpacker
+	public class JsonPacker : IPacker
 	{
 		public object Pack(object message)
 		{
 			throw new NotImplementedException();
 		}
-
-		public object Unpack(object message)
+		public bool Valide(object obj)
 		{
 			throw new NotImplementedException();
 		}

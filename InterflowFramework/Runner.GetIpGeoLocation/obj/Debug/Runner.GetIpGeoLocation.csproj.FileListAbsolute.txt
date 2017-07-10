@@ -3,3 +3,4 @@ C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.GetIpGeoLocation\b
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.GetIpGeoLocation\bin\Debug\Runner.GetIpGeoLocation.pdb
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.GetIpGeoLocation\obj\Debug\Runner.GetIpGeoLocation.exe
 C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.GetIpGeoLocation\obj\Debug\Runner.GetIpGeoLocation.pdb
+C:\Dev\All Stuff\InterflowFramework\InterflowFramework\Runner.GetIpGeoLocation\obj\Debug\Runner.GetIpGeoLocation.csprojResolveAssemblyReference.cache

@@ -15,6 +15,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MimeMapping;
+using InternalFramework;
+using InternalFramework.OutputPoint;
 
 namespace _2_Browser_Nancy_RabbitMq
 {

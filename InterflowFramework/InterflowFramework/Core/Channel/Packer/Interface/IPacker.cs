@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterflowFramework.Core.Channel.Packer.Interface
 {
-	public interface IPacker
+	public interface IPacker: IValidator
 	{
 		object Pack(object message);
 	}
